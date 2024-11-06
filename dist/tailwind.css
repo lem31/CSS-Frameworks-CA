@@ -562,8 +562,17 @@ video {
 .w-\[414px\] {
   width: 414px;
 }
+.w-\[100\%\] {
+  width: 100%;
+}
+.flex-row {
+  flex-direction: row;
+}
 .flex-col {
   flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
 }
 .space-x-20 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
