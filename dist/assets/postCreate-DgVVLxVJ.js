@@ -1,0 +1,1 @@
+import{g as o}from"./create-COmdal_b.js";import{a}from"./authGuard-DDO8JLiG.js";import"./headers-ahJeJWcP.js";function r(){const t=document.getElementById("create-form");t&&t.addEventListener("submit",e=>o(e))}a();r();
