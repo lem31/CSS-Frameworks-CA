@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="../dist/styles.css"
+    />
   </head>
   <body>
     <h1>Auth</h1>
@@ -15,12 +19,12 @@
     <h1>Login</h1>
     <form class="hidden" name="login" id="login-form">
       <div>
-        <label class="hidden" for="email">Email</label>
+        <label class="" for="email">Email</label>
         <input class="" id="email" type="email" name="email" required />
       </div>
 
       <div>
-        <label class="hidden" for="password">Password</label>
+        <label class="" for="password">Password</label>
         <input type="password" name="password" id="password" required />
       </div>
 
@@ -31,7 +35,7 @@
 
     <h1>Register</h1>
 
-    <form class="" name="register" id="register-form" method="post">
+    <form class="hidden" name="register" id="register-form" method="post">
       <div>
         <label for="name">Name</label>
         <input
