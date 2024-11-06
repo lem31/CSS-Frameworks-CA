@@ -1,5 +1,5 @@
 import { API_AUTH_LOGIN } from "../constants.js";
-import { LOGIN_FORM } from "../constants.js";
+
 import { ERROR_MESSAGE } from "../constants.js";
 import { headers } from "../headers.js";
 
@@ -29,6 +29,8 @@ import { headers } from "../headers.js";
  * const LOGIN_BUTTON = document.getElementById("login-button");
  * LOGIN_BUTTON.addEventListener("click", login);
  */
+
+const LOGIN_FORM = document.getElementById("login-form");
 
 export async function login(event) {
   event.preventDefault();

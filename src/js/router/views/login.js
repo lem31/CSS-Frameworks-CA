@@ -1,5 +1,4 @@
 import { onLogin } from "../../ui/auth/login";
-import { LOGIN_FORM } from "../../api/constants.js";
 
 /**
  * Listens for the login form submission event and calls the onLogin function.
@@ -9,6 +8,7 @@ import { LOGIN_FORM } from "../../api/constants.js";
  * listenForLoginFormSubmission();
  */
 function listenForLoginFormSubmission() {
+  const LOGIN_FORM = document.getElementById("login-form");
   LOGIN_FORM.addEventListener("submit", onLogin);
 }
 

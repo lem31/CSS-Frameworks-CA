@@ -31,10 +31,6 @@ export const ACCESS_TOKEN = localStorage.getItem("accessToken");
 
 export const ERROR_MESSAGE = document.getElementById("error-message");
 
-//LOGIN PAGE CONSTANTS
-
-export const LOGIN_FORM = document.getElementById("login-form");
-
 //CREATE POST PAGE CONSTANTS
 
 export const CREATE_POST_FORM = document.getElementById("create-form");

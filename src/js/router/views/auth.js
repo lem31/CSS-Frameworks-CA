@@ -3,7 +3,7 @@
 alert("Auth Index Page");
 
 import { onLogin } from "../../ui/auth/login";
-import { LOGIN_FORM } from "../../api/constants.js";
+
 import { onRegister } from "../../ui/auth/register";
 
 /**
@@ -14,6 +14,7 @@ import { onRegister } from "../../ui/auth/register";
  * listenForLoginFormSubmission();
  */
 function listenForLoginFormSubmission() {
+  const LOGIN_FORM = document.getElementById("login-form");
   LOGIN_FORM.addEventListener("submit", onLogin);
 }
 
