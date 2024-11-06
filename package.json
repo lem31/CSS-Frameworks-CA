@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-  "build": "vite build",
-  "build:css": "postcss src/tailwind.css -o dist/tailwind.css && sass src/styles.scss dist/styles.css --no-source-map",
-  "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch & sass --watch src/styles.scss:dist/styles.css --no-source-map",
+    "build": "vite build",
+    "build:css": "postcss src/tailwind.css -o dist/tailwind.css && sass src/styles.scss dist/styles.css --no-source-map",
+    "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch & sass --watch src/styles.scss:dist/styles.css --no-source-map",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
