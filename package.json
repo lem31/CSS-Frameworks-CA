@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:css": "sass src/styles.scss dist/styles.css --no-source-map && postcss dist/styles.css -o dist/styles.css",
-    "watch:css": "sass --watch src/styles.scss:dist/styles.css --no-source-map",
+    "watch:css": "sass --watch src/styles.scss:dist/styles.css --no-source-map && postcss --watch dist/styles.css -o dist/styles.css",
     "preview": "vite preview"
   },
   "devDependencies": {
