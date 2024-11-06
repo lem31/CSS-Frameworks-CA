@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:css": "postcss src/tailwind.css -o dist/tailwind.css && sass src/styles.scss dist/styles.css --no-source-map",
-    "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch & sass --watch src/styles.scss:dist/styles.css --no-source-map",
+    "build:css": "postcss src/tailwind.css -o dist/tailwind.css && sass src/styles.scss dist/styles.scss --no-source-map",
+    "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch & sass --watch src/styles.scss:dist/styles.scss --no-source-map",
     "preview": "vite preview"
   },
   "devDependencies": {

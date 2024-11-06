@@ -538,15 +538,27 @@ video {
 .hidden {
   display: none;
 }
+.h-\[106px\] {
+  height: 106px;
+}
 .h-\[91px\] {
   height: 91px;
+}
+.w-\[345px\] {
+  width: 345px;
 }
 .w-\[91px\] {
   width: 91px;
 }
+.space-x-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(5rem * var(--tw-space-x-reverse));
+  margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .rounded-full {
   border-radius: 9999px;
 }
-.border {
-  border-width: 1px;
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
 }

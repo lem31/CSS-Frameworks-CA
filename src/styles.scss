@@ -1,3 +1,6 @@
+@import "variables";
+
+
 @mixin flex-center-display {
   display: flex;
   justify-content: center;
@@ -7,4 +10,9 @@
 
 .flex-center-layout {
   @include flex-center-display;
+ 
+}
+
+.button {
+  background-color: $primary-color;
 }

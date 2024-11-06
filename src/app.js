@@ -1,4 +1,4 @@
-import "../dist/styles.css";
+import "../dist/styles.scss";
 import "../dist/tailwind.css";
 import "tailwindcss/tailwind.css";
 
