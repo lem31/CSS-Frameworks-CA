@@ -535,6 +535,9 @@ video {
 .block {
   display: block;
 }
+.flex {
+  display: flex;
+}
 .hidden {
   display: none;
 }
@@ -544,11 +547,23 @@ video {
 .h-\[91px\] {
   height: 91px;
 }
+.h-\[222px\] {
+  height: 222px;
+}
+.h-\[222\] {
+  height: 222;
+}
 .w-\[345px\] {
   width: 345px;
 }
 .w-\[91px\] {
   width: 91px;
+}
+.w-\[414px\] {
+  width: 414px;
+}
+.flex-col {
+  flex-direction: column;
 }
 .space-x-20 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
