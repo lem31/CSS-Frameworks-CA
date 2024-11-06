@@ -30,17 +30,37 @@
 .form-container{
 display: flex;
 flex-direction: column;
+align-items: center;
 background-color: $primary-color;
 }
 
 .form{
   display: flex;
   flex-direction: column;
-
+  align-items: center;
 }
 
 .label-desktop{
   color: $secondary-color;
   font-family: $font-family;
   font-size: 16px;
+}
+
+.input-desktop{
+  width: 325px;
+  height: 23px;
+  background-color:$tertiary-color;
+  color: $tertiary-color;
+&:focus{
+  background-color: $primary-color;
+  border: 3px solid $secondary-color;
+
+}
+}
+
+.subheader-desktop{
+  color: $secondary-color;
+  font-family: $font-family;
+  font-size: 24px;
+  justify-self: center;
 }

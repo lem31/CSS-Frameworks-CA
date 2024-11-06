@@ -25,22 +25,38 @@
         </button>
       </div>
 
-      <div class="flex flex-row w-[100%] justify-center">
-        <div class="login-form-container form-container w-[414px] h-[222px]">
-          <h1 class="">Login</h1>
+      <div class="flex flex-row w-[100%] justify-center mx-auto">
+        <div
+          class="login-form-container form-container w-[414px] h-[222px] justify-center"
+        >
+          <h1 class="subheader-desktop">Login</h1>
           <form class="form" name="login" id="login-form">
             <div class="flex flex-col">
               <label class="label-desktop" for="email">Email</label>
-              <input class="" id="email" type="email" name="email" required />
+              <input
+                class="input-desktop"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col justify-center">
               <label class="label-desktop" for="password">Password</label>
-              <input type="password" name="password" id="password" required />
+              <input
+                class="input-desktop"
+                type="password"
+                name="password"
+                id="password"
+                required
+              />
             </div>
-
-            <button>Login</button>
-
+            <div class="flex flex-row w-[100%] justify-center">
+              <button class="button-desktop px-2 border border-white bg-black">
+                Login
+              </button>
+            </div>
             <div id="error-message"></div>
           </form>
         </div>

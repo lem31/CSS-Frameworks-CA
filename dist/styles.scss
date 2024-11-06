@@ -23,16 +23,36 @@
 .form-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #000000;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .label-desktop {
   color: #C1FF72;
   font-family: "Alumni Sans", sans-serif;
   font-size: 16px;
+}
+
+.input-desktop {
+  width: 325px;
+  height: 23px;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.input-desktop:focus {
+  background-color: #000000;
+  border: 3px solid #C1FF72;
+}
+
+.subheader-desktop {
+  color: #C1FF72;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 24px;
+  justify-self: center;
 }
