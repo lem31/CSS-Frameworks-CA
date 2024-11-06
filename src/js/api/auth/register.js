@@ -38,7 +38,6 @@ import { headers } from "../headers.js";
 
 export async function register(event) {
   event.preventDefault();
-
   const REG_FORM_OBJECT = new FormData(REG_FORM);
   const REG_FORM_DATA = Object.fromEntries(REG_FORM_OBJECT);
 

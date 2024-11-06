@@ -1,3 +1,3 @@
-import { onRegister } from "../../ui/auth/register";
+// import { onRegister } from "../../ui/auth/register";
 
-onRegister();
+// onRegister();
