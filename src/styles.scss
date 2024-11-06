@@ -1,3 +1,10 @@
-@use "../node_modules/tailwindcss/base";
-@use "../node_modules/tailwindcss/components";
-@use "../node_modules/tailwindcss/utilities";
+@mixin flex-center-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flex-center-layout {
+  @include flex-center-display;
+}

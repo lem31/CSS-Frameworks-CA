@@ -2,6 +2,14 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  plugins: [vue()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "src/styles/styles.scss";`,
+      },
+    },
+  },
   appType: "mpa",
   base: "",
   build: {
