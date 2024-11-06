@@ -10,6 +10,10 @@ const LOGIN_FORM = document.getElementById("login-form");
 
 const LOGIN_BUTTON = document.getElementById("login-button");
 
+const REGISTER_FORM = document.getElementById("register-form");
+
+const REGISTER_BUTTON = document.getElementById("register-button");
+
 /**
  * Listens for the login form submission event and calls the onLogin function.
  * @function listenForLoginFormSubmission
@@ -34,5 +38,15 @@ function showLoginForm() {
     LOGIN_FORM.style.display = "block";
   } else {
     LOGIN_FORM.style.display = "none";
+  }
+}
+
+REGISTER_BUTTON.addEventListener("click", showRegisterForm);
+
+function showRegisterForm() {
+  if (REGISTER_FORM.style.display === "none") {
+    REGISTER_FORM.style.display = "block";
+  } else {
+    REGISTER_FORM.style.display = "none";
   }
 }
