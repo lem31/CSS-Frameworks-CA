@@ -1,7 +1,5 @@
 import { API_AUTH_REGISTER } from "../constants.js";
 
-import { REG_FORM } from "../constants.js";
-
 import { ERROR_MESSAGE } from "../constants.js";
 
 import { headers } from "../headers.js";
@@ -36,8 +34,12 @@ import { headers } from "../headers.js";
  *
  */
 
-export async function register(event) {
-  event.preventDefault();
+const REG_FORM = document.getElementById("register-form");
+
+export async function register() {
+  if (REG_FORM) {
+    REG_FORM.onsubmit = (e) => e.preventDefault();
+  }
   const REG_FORM_OBJECT = new FormData(REG_FORM);
   const REG_FORM_DATA = Object.fromEntries(REG_FORM_OBJECT);
 

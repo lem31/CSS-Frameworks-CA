@@ -1,5 +1,4 @@
 import { register } from "../../api/auth/register.js";
-import { REG_FORM } from "../../api/constants.js";
 
 /**
  * This function is called when the register form is submitted.
@@ -14,7 +13,8 @@ import { REG_FORM } from "../../api/constants.js";
  * REG_FORM.addEventListener("submit", onRegister);
  */
 
-export async function onRegister(event) {
-  event.preventDefault();
-  await register(event);
+export async function onRegister() {
+  const REG_FORM = document.getElementById("register-form");
+  register();
+  REG_FORM.addEventListener("submit", register);
 }
