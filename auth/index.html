@@ -9,10 +9,11 @@
   </head>
   <body>
     <h1>Auth</h1>
-    <a href="./login/">Login</a> or <a href="./register/">Register</a>
+    <button>Login</button>
+    <button>Register</button>
 
     <h1>Login</h1>
-    <form name="login" id="login-form">
+    <form class="hidden" name="login" id="login-form">
       <div>
         <label for="email">Email</label>
         <input id="email" type="email" name="email" required />
@@ -30,7 +31,7 @@
 
     <h1>Register</h1>
 
-    <form name="register" id="register-form" method="post">
+    <form class="hidden" name="register" id="register-form" method="post">
       <div>
         <label for="name">Name</label>
         <input
