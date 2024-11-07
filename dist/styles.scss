@@ -208,4 +208,9 @@
     grid-column: 3/3;
     grid-row: 1/2;
   }
+  .sort-alignment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
