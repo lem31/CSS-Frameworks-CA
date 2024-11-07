@@ -49,10 +49,12 @@ background-color: $primary-color;
 
 @media (max-width: $breakpoint-small){
 
- 
-.nav-ul-mobile{
-  margin-top: -20px;
-}
+  .hamburger-alignment{
+    display: flex;
+    justify-content: center;
+align-items: center;
+  }
+
 
   .hide-on-mobile{
     display: none;
@@ -72,16 +74,12 @@ background-color: $primary-color;
   }
 
   .hamburger{
-    @include grid-container-mobile();
+  
     grid-column: 3/3;
     grid-row: 1/2;
-
-   
-
   }
 
   .nav{
-    @include grid-container-mobile();
     grid-column: 3/3;
     grid-row: 2/2;
     align-items: center;
@@ -91,12 +89,12 @@ background-color: $primary-color;
   .nav-alignment{
 display: flex;
 justify-content: center;
+align-items: start;
   }
 
   
 
   .search{
-    @include grid-container-mobile();
     grid-column: 2/3;
     grid-row: 2/2;
   }
@@ -178,17 +176,19 @@ height: 211px;
 
 
 
-@mixin grid-container{
-  display: grid;
-  grid-template-columns: repeat($grid-columns-3, 1fr);
-  gap: 10px;
-  align-items: center ;
-  
-}
+
 
 
 
 @media (min-width: $breakpoint-medium){
+
+  @mixin grid-container{
+    display: grid;
+    grid-template-columns: repeat($grid-columns-3, 1fr);
+    gap: 10px;
+    align-items: center ;
+    
+  }
 
 
   .nav-layout-desktop{
@@ -196,6 +196,13 @@ height: 211px;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 10px;
+  }
+
+  .nav-col-desktop{
+    @include grid-container();
+    grid-column: 2/3;
+    grid-row: 1/1;
+
   }
 
   .nav-items-desktop{
@@ -273,6 +280,12 @@ background-color: $primary-color;
 border: 3px solid $secondary-color;
 
 }
+}
+
+.search-col-desktop{
+  grid-column: 3/3;
+  grid-row: 1/2;
+
 }
   
   
