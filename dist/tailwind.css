@@ -605,6 +605,9 @@ video {
 .w-\[50\%\] {
   width: 50%;
 }
+.w-\[80\%\] {
+  width: 80%;
+}
 .min-w-9 {
   min-width: 2.25rem;
 }

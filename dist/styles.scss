@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+.sort-alignment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -207,10 +213,5 @@
   .search-col-desktop {
     grid-column: 3/3;
     grid-row: 1/2;
-  }
-  .sort-alignment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
