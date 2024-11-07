@@ -46,7 +46,7 @@ export class CreateAllPostElements {
     const POST_IMAGE = document.createElement("img");
 
     POST_IMAGE.classList.add("post-image");
-
+    const VIEW_POST_BTN_BOX = document.createElement("div");
     const VIEW_POST_BUTTON = document.createElement("button");
     VIEW_POST_BUTTON.textContent = "View post";
     VIEW_POST_BUTTON.classList.add("button-mobile");
@@ -62,7 +62,7 @@ export class CreateAllPostElements {
     } else {
       POST_IMAGE.alt = "No image available";
     }
-
+    VIEW_POST_BTN_BOX.appendChild(VIEW_POST_BUTTON);
     TEXT_BOX.appendChild(TITLE_BOX);
     TEXT_BOX.appendChild(BODY_BOX);
     TEXT_BOX.appendChild(TAGS_BOX);
@@ -72,10 +72,9 @@ export class CreateAllPostElements {
     TAGS_BOX.innerHTML = `<strong>Tags:</strong> ${TAGS_BOX.innerHTML}`;
 
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_IMAGE);
-    INDIVIDUAL_POST_CONTAINER.appendChild(VIEW_POST_BUTTON);
-
-    container.appendChild(INDIVIDUAL_POST_CONTAINER);
     container.appendChild(TEXT_BOX);
+    container.appendChild(INDIVIDUAL_POST_CONTAINER);
+    container.appendChild(VIEW_POST_BTN_BOX);
 
     POST_IMAGE.addEventListener("click", () => {
       window.location.href = `/post/?id=${post.id}`;
