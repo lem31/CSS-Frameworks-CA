@@ -141,10 +141,11 @@ height: 211px;
     width: 168px;
     height: 11.5px;
     background-color:$tertiary-color;
-  color: $tertiary-color;
+  color: $primary-color;
 &:focus{
   background-color: $primary-color;
   border: 3px solid $secondary-color;
+  color: $secondary-color;
 
 }
   }
@@ -202,9 +203,6 @@ height: 211px;
  
   
 }
-
-
-
 
 
 
@@ -286,10 +284,11 @@ height: 211px;
   width: 325px;
   height: 23px;
   background-color:$tertiary-color;
-  color: $tertiary-color;
+  color: $primary-color;
 &:focus{
   background-color: $primary-color;
   border: 3px solid $secondary-color;
+  color: $secondary-color;
 
 }
 }

@@ -97,11 +97,12 @@
     width: 168px;
     height: 11.5px;
     background-color: #FFFFFF;
-    color: #FFFFFF;
+    color: #000000;
   }
   .input-mobile:focus {
     background-color: #000000;
     border: 3px solid #C1FF72;
+    color: #C1FF72;
   }
   .search-mobile {
     width: 347px;
@@ -203,11 +204,12 @@
     width: 325px;
     height: 23px;
     background-color: #FFFFFF;
-    color: #FFFFFF;
+    color: #000000;
   }
   .input-desktop:focus {
     background-color: #000000;
     border: 3px solid #C1FF72;
+    color: #C1FF72;
   }
   .subheader-desktop {
     color: #C1FF72;
