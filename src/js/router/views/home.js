@@ -36,9 +36,12 @@ export class CreateAllPostElements {
     INDIVIDUAL_POST_CONTAINER.classList.add("individual-post-box");
     INDIVIDUAL_POST_CONTAINER.classList.add("post-container-mobile");
     INDIVIDUAL_POST_CONTAINER.classList.add("post-container-desktop");
-
+    const TEXT_BOX = document.createElement("div");
+    const TITLE_BOX = document.createElement("div");
     const POST_TITLE = document.createElement("h2");
     const POST_BODY = document.createElement("p");
+    const BODY_BOX = document.createElement("div");
+    const TAGS_BOX = document.createElement("div");
     const POST_TAGS = document.createElement("p");
     const POST_IMAGE = document.createElement("img");
 
@@ -46,6 +49,8 @@ export class CreateAllPostElements {
 
     const VIEW_POST_BUTTON = document.createElement("button");
     VIEW_POST_BUTTON.textContent = "View post";
+    VIEW_POST_BUTTON.classList.add("button-mobile");
+    VIEW_POST_BUTTON.classList.add("button-desktop");
 
     POST_TITLE.textContent = post.title || "No title available";
     POST_BODY.textContent = post.body || "No content available";
@@ -58,13 +63,19 @@ export class CreateAllPostElements {
       POST_IMAGE.alt = "No image available";
     }
 
-    INDIVIDUAL_POST_CONTAINER.appendChild(POST_TITLE);
-    INDIVIDUAL_POST_CONTAINER.appendChild(POST_BODY);
-    INDIVIDUAL_POST_CONTAINER.appendChild(POST_TAGS);
+    TEXT_BOX.appendChild(TITLE_BOX);
+    TEXT_BOX.appendChild(BODY_BOX);
+    TEXT_BOX.appendChild(TAGS_BOX);
+    TITLE_BOX.appendChild(POST_TITLE);
+    BODY_BOX.appendChild(POST_BODY);
+    TAGS_BOX.appendChild(POST_TAGS);
+    TAGS_BOX.innerHTML = `<strong>Tags:</strong> ${TAGS_BOX.innerHTML}`;
+
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_IMAGE);
     INDIVIDUAL_POST_CONTAINER.appendChild(VIEW_POST_BUTTON);
 
     container.appendChild(INDIVIDUAL_POST_CONTAINER);
+    container.appendChild(TEXT_BOX);
 
     POST_IMAGE.addEventListener("click", () => {
       window.location.href = `/post/?id=${post.id}`;
