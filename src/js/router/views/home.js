@@ -34,6 +34,8 @@ export class CreateAllPostElements {
   constructor(post, container) {
     const INDIVIDUAL_POST_CONTAINER = document.createElement("div");
     INDIVIDUAL_POST_CONTAINER.classList.add("individual-post-box");
+    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-mobile");
+    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-desktop");
 
     const POST_TITLE = document.createElement("h2");
     const POST_BODY = document.createElement("p");

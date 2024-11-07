@@ -28,6 +28,14 @@
   gap: 10px;
 }
 
+.outer-post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (max-width: 640px) {
   .hamburger-alignment {
     display: flex;
@@ -118,6 +126,14 @@
     font-size: 16px;
   }
   .button-mobile:active {
+    border: 3px solid #C1FF72;
+  }
+  .post-container-mobile {
+    border: 3px solid #000000;
+    width: 50%;
+    height: 50%;
+  }
+  .post-container-mobile:active {
     border: 3px solid #C1FF72;
   }
   .nav-items-mobile {
@@ -213,5 +229,13 @@
   .search-col-desktop {
     grid-column: 3/3;
     grid-row: 1/2;
+  }
+  .post-container-desktop {
+    border: 3px solid #000000;
+    width: 80%;
+    height: 80%;
+  }
+  .post-container-desktop:active {
+    border: 3px solid #C1FF72;
   }
 }
