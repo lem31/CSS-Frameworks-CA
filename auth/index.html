@@ -17,24 +17,32 @@
     </header>
     <main>
       <div class="flex-center-layout space-x-20">
-        <button class="button-desktop w-[345px] h-[106px]" id="login-button">
+        <button
+          class="button-desktop button-mobile w-[345px] h-[106px]"
+          id="login-button"
+        >
           Login
         </button>
-        <button class="button-desktop w-[345px] h-[106px]" id="register-button">
+        <button
+          class="button-desktop button-mobile w-[345px] h-[106px]"
+          id="register-button"
+        >
           Register
         </button>
       </div>
 
       <div class="flex flex-row w-[100%] justify-center mx-auto mt-2">
         <div
-          class="login-form-container form-container w-[414px] h-[222px] justify-center"
+          class="login-form-container form-container form-size-mobile form-size-desktop justify-center"
         >
-          <h1 class="subheader-desktop">Login</h1>
+          <h1 class="subheader-mobile subheader-desktop">Login</h1>
           <form class="form" name="login" id="login-form">
             <div class="flex flex-col">
-              <label class="label-desktop" for="email">Email</label>
+              <label class="label-mobile label-desktop" for="email"
+                >Email</label
+              >
               <input
-                class="input-desktop"
+                class="input-mobile input-desktop"
                 id="email"
                 type="email"
                 name="email"
@@ -43,9 +51,11 @@
             </div>
 
             <div class="flex flex-col justify-center">
-              <label class="label-desktop" for="password">Password</label>
+              <label class="label-mobile label-desktop" for="password"
+                >Password</label
+              >
               <input
-                class="input-desktop"
+                class="input-mobile input-desktop"
                 type="password"
                 name="password"
                 id="password"
@@ -53,7 +63,9 @@
               />
             </div>
             <div class="flex flex-row w-[100%] justify-center">
-              <button class="button-desktop px-2 border border-white bg-black">
+              <button
+                class="button-mobile button-desktop px-2 border border-white bg-black"
+              >
                 Login
               </button>
             </div>
@@ -64,14 +76,14 @@
 
       <div class="flex flex-row w-[100%] justify-center mx-auto mt-2">
         <div
-          class="register-form-container form-container w-[414px] h-[311px] justify-center"
+          class="register-form-container form-container register-form-size-mobile register-form-size-desktop justify-center"
         >
-          <h1 class="subheader-desktop">Register</h1>
+          <h1 class="subheader-mobile subheader-desktop">Register</h1>
           <form class="form" name="register" id="register-form" method="post">
             <div class="flex flex-col">
-              <label class="label-desktop" for="name">Name</label>
+              <label class="label-mobile label-desktop" for="name">Name</label>
               <input
-                class="register-input input-desktop"
+                class="register-input input-mobile input-desktop"
                 id="name"
                 type="text"
                 name="name"
@@ -84,9 +96,11 @@
             </div>
 
             <div class="flex flex-col">
-              <label class="label-desktop" for="email">Email</label>
+              <label class="label-mobile label-desktop" for="email"
+                >Email</label
+              >
               <input
-                class="register-input input-desktop"
+                class="register-input input-mobile input-desktop"
                 id="email"
                 type="email"
                 name="email"
@@ -98,9 +112,11 @@
             </div>
 
             <div class="flex flex-col">
-              <label class="label-desktop" for="password">Password</label>
+              <label class="label-mobile label-desktop" for="password"
+                >Password</label
+              >
               <input
-                class="register-input input-desktop"
+                class="register-input input-mobile input-desktop"
                 type="password"
                 name="password"
                 autocomplete="password"
@@ -111,7 +127,7 @@
             </div>
             <div class="flex flex-row w-[100%] justify-center">
               <button
-                class="button-desktop px-2 border border-white bg-black"
+                class="button-mobile button-desktop px-2 border border-white bg-black"
                 id="register-button"
               >
                 Register

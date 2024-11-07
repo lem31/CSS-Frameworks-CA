@@ -14,16 +14,8 @@
  
 }
 
-.button-desktop {
-  background-color: $primary-color;
-  color: $secondary-color;
-  font-family: $font-family;
-  font-size: $button-font-size-desktop;
-  &:active {
-    border: 3px solid $secondary-color;
-   
-  }
-}
+
+
 
 .form-container{
 display: flex;
@@ -32,6 +24,10 @@ align-items: center;
 background-color: $primary-color;
 }
 
+
+
+
+
 .form{
   display: flex;
   flex-direction: column;
@@ -39,11 +35,90 @@ background-color: $primary-color;
  gap: 10px;
 }
 
-.label-desktop{
-  color: $secondary-color;
-  font-family: $font-family;
-  font-size: 16px;
+
+
+
+
+
+
+
+@media (max-width: $breakpoint-small){
+
+  .form-size-mobile{
+    width: 224px;
+    height: 181px;}
+
+    .register-form-size-mobile{
+width:224px;
+height: 211px;
+    }
+
+
+
+  .subheader-mobile{
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: 20px;
+  }
+
+  .input-mobile{
+  
+    width: 168px;
+    height: 11.5px;
+  }
+
+  .label-mobile{
+    color: $secondary-color;
+    font-family: $font-family;
+
+    font-size: ¢label-font-size-mobile;
+  }
+
+  .button-mobile {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: $button-font-size-mobile;
+
+    &:active {
+      border: 3px solid $secondary-color;
+     
+    }
+  }
+  
 }
+
+
+
+@media (min-width: $breakpoint-medium){
+
+  .form-size-desktop{
+    width:414px;
+    height: 222px;
+    
+    }
+
+    .register-form-size-desktop{
+      width:414px;
+      height: 311px;
+    }
+
+  .button-desktop {
+    background-color: $primary-color;
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: $button-font-size-desktop;
+    &:active {
+      border: 3px solid $secondary-color;
+     
+    }
+  }
+  .label-desktop{
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: $label-font-size-desktop;
+  }
+
 
 .input-desktop{
   width: 325px;
@@ -57,9 +132,13 @@ background-color: $primary-color;
 }
 }
 
+
 .subheader-desktop{
   color: $secondary-color;
   font-family: $font-family;
   font-size: 24px;
   justify-self: center;
+}
+  
+  
 }
