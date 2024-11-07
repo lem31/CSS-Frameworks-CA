@@ -46,6 +46,7 @@ export class CreateAllPostElements {
     const POST_IMAGE = document.createElement("img");
 
     POST_IMAGE.classList.add("post-image");
+
     const VIEW_POST_BTN_BOX = document.createElement("div");
     const VIEW_POST_BUTTON = document.createElement("button");
     VIEW_POST_BUTTON.textContent = "View post";
