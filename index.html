@@ -18,18 +18,35 @@
           style="width: 200px; height: 200px; border-radius: 50%"
         />
       </div>
-      <button class="hide-on-desktop nav">
-        <img src="Images/icons8-hamburger-menu-50 copy.png" alt="" />
-      </button>
 
-      <nav class="hide-on-mobile space-x-4">
-        <a class="nav-items-desktop nav-items-mobile" href="/profile/"
-          >My Profile</a
-        >
-        <button class="nav-items-desktop nav-items-mobile" id="logout-button">
-          Logout
-        </button>
-      </nav>
+      <button
+        class="hamburger hamburger-menu hide-on-desktop align-bottom nav-alignment"
+      >
+        <img
+          class="min-w-7"
+          src="Images/icons8-hamburger-menu-50 copy.png"
+          alt=""
+        />
+      </button>
+      <div class="nav nav-alignment">
+        <nav class="nav nav-menu hidden space-x-4">
+          <ul class="nav-ul nav-layout-desktop justify-end md:justify-center">
+            <li>
+              <a class="nav-items-desktop nav-items-mobile" href="/profile/"
+                >My Profile</a
+              >
+            </li>
+            <li>
+              <button
+                class="nav-items-desktop nav-items-mobile"
+                id="logout-button"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <div class="search">
         <input

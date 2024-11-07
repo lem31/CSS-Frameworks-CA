@@ -50,7 +50,9 @@ background-color: $primary-color;
 @media (max-width: $breakpoint-small){
 
  
-
+.nav-ul-mobile{
+  margin-top: -20px;
+}
 
   .hide-on-mobile{
     display: none;
@@ -69,13 +71,29 @@ background-color: $primary-color;
   
   }
 
-  .nav{
+  .hamburger{
     @include grid-container-mobile();
     grid-column: 3/3;
     grid-row: 1/2;
+
+   
+
+  }
+
+  .nav{
+    @include grid-container-mobile();
+    grid-column: 3/3;
+    grid-row: 2/2;
     align-items: center;
 
   }
+
+  .nav-alignment{
+display: flex;
+justify-content: center;
+  }
+
+  
 
   .search{
     @include grid-container-mobile();
@@ -147,6 +165,8 @@ height: 211px;
     }
   }
 
+
+
   .nav-items-mobile{
     font-family: $font-family;
     font-size: 14px;
@@ -169,6 +189,14 @@ height: 211px;
 
 
 @media (min-width: $breakpoint-medium){
+
+
+  .nav-layout-desktop{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
 
   .nav-items-desktop{
     font-family: $font-family;

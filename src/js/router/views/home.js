@@ -187,3 +187,28 @@ export async function getAllPosts() {
 }
 
 getAllPosts();
+
+//HAMBURGER NAV
+
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburgerMenu.addEventListener("click", () => {
+  if (navMenu.classList.contains("hidden")) {
+    navMenu.classList.remove("hidden");
+    navMenu.classList.add("block");
+  } else if (navMenu.classList.contains("block")) {
+    navMenu.classList.remove("block");
+    navMenu.classList.add("hidden");
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 641) {
+    navMenu.classList.remove("hidden");
+    navMenu.classList.add("flex");
+  } else {
+    navMenu.classList.remove("flex");
+    navMenu.classList.add("hidden");
+  }
+});
