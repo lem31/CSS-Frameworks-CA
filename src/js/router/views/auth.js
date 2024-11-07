@@ -16,6 +16,10 @@ const REGISTER_BUTTON = document.getElementById("register-button");
 
 const LOGIN_FORM_CONTAINER = document.querySelector(".login-form-container");
 
+const REGISTER_FORM_CONTAINER = document.querySelector(
+  ".register-form-container"
+);
+
 /**
  * Listens for the login form submission event and calls the onLogin function.
  * @function listenForLoginFormSubmission
@@ -46,9 +50,9 @@ function showLoginForm() {
 REGISTER_BUTTON.addEventListener("click", showRegisterForm);
 
 function showRegisterForm() {
-  if (REGISTER_FORM.style.display === "none") {
-    REGISTER_FORM.style.display = "block";
+  if (REGISTER_FORM_CONTAINER.style.display === "none") {
+    REGISTER_FORM_CONTAINER.style.display = "block";
   } else {
-    REGISTER_FORM.style.display = "none";
+    REGISTER_FORM_CONTAINER.style.display = "none";
   }
 }
