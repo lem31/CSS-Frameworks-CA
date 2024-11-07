@@ -2,16 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
+
 @mixin flex-center-display {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.flex-center-layout {
-  @include flex-center-display;
- 
 }
 
 @mixin grid-container-mobile{
@@ -21,6 +18,10 @@
 
 }
 
+.flex-center-layout {
+  @include flex-center-display;
+ 
+}
 
 
 
@@ -58,7 +59,6 @@ background-color: $primary-color;
   .header-layout-mobile{
     @include grid-container-mobile();
    
-   
   }
 
   .logo{
@@ -81,8 +81,6 @@ background-color: $primary-color;
     @include grid-container-mobile();
     grid-column: 2/3;
     grid-row: 2/2;
-
-
   }
 
   .form-size-mobile{
@@ -107,7 +105,28 @@ height: 211px;
   
     width: 168px;
     height: 11.5px;
+    background-color:$tertiary-color;
+  color: $tertiary-color;
+&:focus{
+  background-color: $primary-color;
+  border: 3px solid $secondary-color;
+
+}
   }
+
+  .search-mobile{
+    width: 347px;
+    height: 40px;
+    background-color:$tertiary-color;
+    border: 3px solid $primary-color;
+  color: $tertiary-color;
+&:focus{
+  background-color: $primary-color;
+  border: 3px solid $secondary-color;
+
+}
+  }
+
 
   .label-mobile{
     color: $secondary-color;
@@ -127,6 +146,13 @@ height: 211px;
      
     }
   }
+
+  .nav-items-mobile{
+    font-family: $font-family;
+    font-size: 14px;
+    color: $primary-color;
+    font-weight: bold ;
+  }
   
 }
 
@@ -136,11 +162,20 @@ height: 211px;
   display: grid;
   grid-template-columns: repeat($grid-columns-3, 1fr);
   gap: 10px;
+  align-items: center ;
+  
 }
 
 
 
 @media (min-width: $breakpoint-medium){
+
+  .nav-items-desktop{
+    font-family: $font-family;
+    font-size: 16px;
+    color: $primary-color;
+    font-weight: bold ;
+  }
 
   .hide-on-desktop{
     display: none;
@@ -191,11 +226,25 @@ height: 211px;
 }
 
 
+
 .subheader-desktop{
   color: $secondary-color;
   font-family: $font-family;
   font-size: 24px;
   justify-self: center;
+}
+
+.search-desktop{
+  width: 300px;
+  height: 40px;
+  background-color:$tertiary-color;
+  border: 3px solid $primary-color;
+color: $tertiary-color;
+&:focus{
+background-color: $primary-color;
+border: 3px solid $secondary-color;
+
+}
 }
   
   

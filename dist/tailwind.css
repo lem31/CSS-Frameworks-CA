@@ -587,6 +587,9 @@ video {
 .w-1 {
   width: 0.25rem;
 }
+.w-\[300\] {
+  width: 300;
+}
 .max-w-4 {
   max-width: 1rem;
 }
@@ -699,8 +702,20 @@ video {
   padding-left: 0px;
   padding-right: 0px;
 }
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
 .align-top {
   vertical-align: top;
+}
+.text-green-400 {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 @media (min-width: 641px) {
 
