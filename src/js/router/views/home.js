@@ -213,3 +213,18 @@ hamburgerMenu.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", handleNavMenu);
+
+//Display Create Form
+
+const createPostButton = document.querySelector(".create-post-button");
+const createPostForm = document.querySelector(".create-post-form");
+
+createPostButton.addEventListener("click", () => {
+  if (createPostForm.classList.contains("hidden")) {
+    createPostForm.classList.remove("hidden");
+    createPostForm.classList.add("show");
+  } else {
+    createPostForm.classList.remove("show");
+    createPostForm.classList.add("hidden");
+  }
+});
