@@ -9,18 +9,26 @@
   </head>
 
   <body>
-    <img
-      src="https://i.ibb.co/DgZ0gGk/ALLERGEN.png"
-      alt=""
-      style="width: 200px; height: 200px; border-radius: 50%"
-    />
+    <header class="header-layout header-layout-mobile">
+      <div class="logo-div">
+        <img
+          class="logo max-w-20 max-h-20 logo-size-mobile rounded-full"
+          src="Images/Logo.png"
+          alt=""
+          style="width: 200px; height: 200px; border-radius: 50%"
+        />
+      </div>
+      <button class="hide-on-desktop nav">
+        <img src="Images/icons8-hamburger-menu-50 copy.png" alt="" />
+      </button>
 
-    <h1>Home</h1>
+      <nav class="hide-on-mobile justify-self-center space-x-4">
+        <a href="/profile/">My Profile</a>
+        <button id="logout-button">Logout</button>
+      </nav>
 
-    <a href="/profile/">My Profile</a>
-    <a href="/auth/login/">Login</a>
-    <a href="/auth/register/">Register</a>
-    <button id="logout-button">Logout</button>
+      <search class="search justify-self-center">Search</search>
+    </header>
 
     <div id="posts-container"></div>
   </body>
