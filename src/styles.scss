@@ -21,9 +21,7 @@
   font-size: $button-font-size-desktop;
   &:active {
     border: 3px solid $secondary-color;
-    .button-text{
-      border: 2px solid $secondary-color;
-    }
+   
   }
 }
 
