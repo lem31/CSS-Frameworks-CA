@@ -63,7 +63,7 @@ background-color: $primary-color;
 
 @media (max-width: $breakpoint-small){
 
-  .profile-image-box-mobile{
+  .profile-image-box{
 width: 5rem;
 height: 5rem;
 border: 3px solid $primary-color;
@@ -364,6 +364,11 @@ border: 3px solid $secondary-color;
   font-weight: bold;}
 
 
-
+  .profile-image-box{
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid $primary-color;
+    border-radius: 100%;
+      }
 
 }

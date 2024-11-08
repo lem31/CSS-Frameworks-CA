@@ -2,6 +2,6 @@ import "../dist/styles.scss";
 import "../dist/tailwind.css";
 import "tailwindcss/tailwind.css";
 
-import router from "./js/router/index.js";
-
 await router(window.location.pathname);
+
+import router from "./js/router/index.js";

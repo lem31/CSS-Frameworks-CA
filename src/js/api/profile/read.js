@@ -92,17 +92,31 @@ function displayUserProfile(PROFILE) {
   const NUMBER_OF_FOLLOWERS = document.createElement("p");
   const NUMBER_FOLLOWING = document.createElement("p");
 
+  const AVATAR_CONTAINER = document.querySelector(".avatar-container");
+
+  AVATAR_CONTAINER.appendChild(AVATAR);
+  AVATAR.classList.add("profile-image-box");
   BANNER.classList.add("profile-banner");
   AVATAR.classList.add("profile-avatar");
-
+  USER_PROFILE.appendChild(AVATAR_CONTAINER);
   USER_PROFILE.appendChild(USER_NAME);
+  const FOLLOWERS_LABEL = document.createElement("span");
+  FOLLOWERS_LABEL.innerHTML = "Followers: ";
+  USER_PROFILE.appendChild(FOLLOWERS_LABEL);
+  FOLLOWERS_LABEL.appendChild(NUMBER_OF_FOLLOWERS);
+
+  const FOLLOWING_LABEL = document.createElement("span");
+  FOLLOWING_LABEL.innerHTML = "Following: ";
+  USER_PROFILE.appendChild(FOLLOWING_LABEL);
+  FOLLOWING_LABEL.appendChild(NUMBER_FOLLOWING);
+
   USER_PROFILE.appendChild(USER_EMAIL);
   USER_PROFILE.appendChild(BIO);
-  USER_PROFILE.appendChild(BANNER);
-  USER_PROFILE.appendChild(AVATAR);
-  USER_PROFILE.appendChild(NUMBER_OF_POSTS);
-  USER_PROFILE.appendChild(NUMBER_OF_FOLLOWERS);
-  USER_PROFILE.appendChild(NUMBER_FOLLOWING);
+  // USER_PROFILE.appendChild(BANNER);
+
+  // USER_PROFILE.appendChild(NUMBER_OF_POSTS);
+  // USER_PROFILE.appendChild(NUMBER_OF_FOLLOWERS);
+  // USER_PROFILE.appendChild(NUMBER_FOLLOWING);
 
   USER_NAME.innerHTML = PROFILE.name || "N/A";
   USER_EMAIL.innerHTML = PROFILE.email || "N/A";
