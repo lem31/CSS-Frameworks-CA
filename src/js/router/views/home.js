@@ -47,6 +47,7 @@ export class CreateAllPostElements {
 
     POST_IMAGE.classList.add("post-image");
     POST_IMAGE.classList.add("image-size-desktop");
+    POST_IMAGE.classList.add("image-size-mobile");
 
     const VIEW_POST_BTN_BOX = document.createElement("div");
     const VIEW_POST_BUTTON = document.createElement("button");

@@ -89,13 +89,13 @@ align-items: center;
 
   .hamburger{
   
-    grid-column: 3/3;
-    grid-row: 1/2;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 
   .nav{
-    grid-column: 3/3;
-    grid-row: 2/2;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
     align-items: center;
 
   }
@@ -109,8 +109,8 @@ align-items: start;
   
 
   .search{
-    grid-column: 2/3;
-    grid-row: 2/2;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   .form-size-mobile{
@@ -183,13 +183,19 @@ height: 211px;
     }
   }
 
+  .image-size-mobile{
+   
+    border:3px solid $primary-color;
+    &:active{
+      border:3px solid $secondary-color;
+     }
+  }
+
 .post-container-mobile{
-  border:3px solid $primary-color;
+
   width:50%;
   height: 50%;
-   &:active{
-    border:3px solid $secondary-color;
-   }
+  
 }
 
   .nav-items-mobile{
@@ -206,16 +212,32 @@ height: 211px;
 
 
 
+@mixin grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
 @media (min-width: $breakpoint-medium){
 
-  @mixin grid-container{
-    display: grid;
-    grid-template-columns: repeat($grid-columns-3, 1fr);
-    gap: 10px;
-    align-items: center ;
-    
-  }
 
+  .image-size-desktop{
+ 
+    object-fit: cover;
+    border:3px solid $primary-color;
+
+    &:active{
+      border:3px solid $secondary-color;
+     }
+  }
+  .post-container-desktop{
+
+    width: 50%;
+    height: 50%;
+   
+   
+  }
 
   .nav-layout-desktop{
     display: flex;
@@ -320,23 +342,7 @@ border: 3px solid $secondary-color;
 
 }
 
-.image-size-desktop{
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-.post-container-desktop{
-  border:3px solid $primary-color;
-  width: 30%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-   &:active{
-    border:3px solid $secondary-color;
-   }
-}
+
 
 
 }
