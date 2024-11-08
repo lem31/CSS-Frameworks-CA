@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{html,js,ts,jsx,tsx}",
     "./auth/**/*.{html,js,ts,jsx,tsx}",
+    "./profile/**/*.{html,js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {

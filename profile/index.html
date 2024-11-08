@@ -5,95 +5,60 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js" defer></script>
+    <script type="module" src="../src/app.js" defer></script>
   </head>
   <body>
-    <h1>Profile</h1>
-
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/post/create/">Create Post</a></li>
-      </ul>
-    </nav>
-
-    <div class="update-logout-buttons-container">
-      <button id="update-profile-button">Update Profile</button>
-      <button id="logout-button">Logout</button>
-    </div>
-
-    <div id="Update-Profile">
-      <form name="updateProfile">
-        <div>
-          <label for="user-name">Username</label>
-          <input
-            class="update-profile-input"
-            id="user-name"
-            type="text"
-            name="user-name"
-            required
-            autocomplete="user-name"
-            title="Please enter a Username"
+    <header class="header-layout header-layout-mobile">
+      <div class="logo-div">
+        <img
+          class="logo max-w-20 max-h-20 logo-size-mobile rounded-full"
+          src="../Images/Logo.png"
+          alt="Logo"
+          style="width: 200px; height: 200px; border-radius: 50%"
+        />
+      </div>
+      <div class="hamburger hamburger-alignment">
+        <button class="hamburger hamburger-menu hide-on-desktop">
+          <img
+            class="min-w-7"
+            src="../Images/icons8-hamburger-menu-50 copy.png"
+            alt="Hamburger menu icon"
           />
-        </div>
+        </button>
+      </div>
 
-        <div>
-          <label for="user-email">User Email</label>
-          <input
-            class="update-profile-input"
-            id="user-email"
-            type="text"
-            name="user-email"
-            required
-            maxlength="100"
-            autocomplete="user-email"
-            pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-            title="Please enter a valid noroff.no or stud.noroff.no address"
-          />
-        </div>
+      <div class="nav nav-col-desktop nav-alignment">
+        <nav class="nav nav-col-desktop nav-menu hidden space-x-4">
+          <ul class="nav-ul nav-layout-desktop justify-end md:justify-center">
+            <li>
+              <a
+                class="whitespace-nowrap nav-items-desktop nav-items-mobile"
+                href="/"
+                >Feed</a
+              >
+            </li>
+            <li>
+              <button
+                class="button-mobile button-desktop px-2"
+                id="logout-button"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <div>
-          <label for="user-bio">Bio</label>
-          <input
-            type="text"
-            id="user-bio"
-            name="user-bio"
-            autocomplete="user-bio"
-            title=" Please enter a bio"
-          />
-        </div>
+    <main>
+      <h1>My Profile</h1>
 
-        <div>
-          <label for="profile-banner">Profile Banner</label>
-          <input
-            type="url"
-            id="profile-banner"
-            name="profile-banner"
-            autocomplete="profile-banner"
-            title=" Please enter a url for your profile banner"
-          />
-        </div>
-
-        <div>
-          <label for="profile-avatar">Profile Avatar</label>
-          <input
-            type="url"
-            id="profile-avatar"
-            name="profile-avatar"
-            autocomplete="profile-avatar"
-            title=" Please enter a url for your profile avatar"
-          />
-
-          <button id="save-profile-button">Save Profile</button>
-          <button id="cancel-button">Cancel</button>
-        </div>
-      </form>
-    </div>
-
-    <div id="error-message" style="color: red"></div>
-
-    <div id="my-profile">MY PROFILE</div>
-    <h2>MY POSTS</h2>
-    <div id="my-posts-container"></div>
+      <div class="profile-image-container">
+        <div class="profile-image-box-mobile"></div>
+      </div>
+      <div id="my-profile"></div>
+      <h2>MY POSTS</h2>
+      <div class="outer-post-container" id="my-posts-container">HELLO</div>
+    </main>
   </body>
 </html>

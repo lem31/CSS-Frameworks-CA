@@ -3,9 +3,11 @@ import { displayPostIDInURLOnEditPage } from "../../ui/post/update.js";
 import { logout } from "../../ui/global/logout.js";
 import { deletePost } from "../../ui/post/delete.js";
 import { headers } from "../../api/headers.js";
+import { onCreatePost } from "../../ui/post/create";
 
 authGuard();
 logout();
+onCreatePost();
 
 // Create all posts elements class/function
 
@@ -48,12 +50,17 @@ export class CreateAllPostElements {
     POST_IMAGE.classList.add("post-image");
     POST_IMAGE.classList.add("image-size-desktop");
     POST_IMAGE.classList.add("image-size-mobile");
+    TITLE_BOX.classList.add("flex-center-layout");
+    TAGS_BOX.classList.add("flex-center-layout");
+    POST_TITLE.classList.add("post-title-mobile");
+    POST_TITLE.classList.add("post-title-desktop");
 
     const VIEW_POST_BTN_BOX = document.createElement("div");
     const VIEW_POST_BUTTON = document.createElement("button");
     VIEW_POST_BUTTON.textContent = "View post";
     VIEW_POST_BUTTON.classList.add("button-mobile");
     VIEW_POST_BUTTON.classList.add("button-desktop");
+    VIEW_POST_BUTTON.classList.add("px-4");
 
     POST_TITLE.textContent = post.title || "No title available";
     POST_BODY.textContent = post.body || "No content available";

@@ -48,7 +48,7 @@ export async function getUserPosts() {
 
     const POSTS_CONTAINER = document.getElementById("my-posts-container");
     if (POSTS_CONTAINER) {
-      POSTS_CONTAINER.innerHTML = ""; // Clear the container
+      POSTS_CONTAINER.innerHTML = "";
       posts.forEach((post) => {
         try {
           new CreateMyPostsElements(post, POSTS_CONTAINER);
@@ -61,6 +61,32 @@ export async function getUserPosts() {
     console.error("Error fetching posts:", error);
   }
 }
+
+//HAMBURGER NAV
+
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navMenu = document.querySelector(".nav-menu");
+
+const handleNavMenu = () => {
+  if (window.innerWidth >= 641) {
+    navMenu.classList.remove("hidden");
+    navMenu.classList.add("flex");
+  } else {
+    navMenu.classList.add("hidden");
+    navMenu.classList.remove("flex");
+  }
+};
+
+handleNavMenu();
+
+hamburgerMenu.addEventListener("click", () => {
+  if (window.innerWidth < 641) {
+    navMenu.classList.toggle("hidden");
+    navMenu.classList.toggle("block");
+  }
+});
+
+window.addEventListener("resize", handleNavMenu);
 
 getUserProfile();
 getUserPosts();
