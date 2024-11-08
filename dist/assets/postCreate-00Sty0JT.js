@@ -1,0 +1,1 @@
+import{g as o}from"./create-D26iuoUm.js";import{a}from"./authGuard-DaSBCqor.js";import"./headers-Dul6VsrZ.js";function r(){const t=document.getElementById("create-form");t&&t.addEventListener("submit",e=>o(e))}a();r();

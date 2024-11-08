@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noroff FED2 JS2 CA</title>
+    <script type="module" crossorigin src="../assets/register-kQys6nNL.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/register-CzWduOXH.css">
+  </head>
+  <body>
+    <header class="flex flex-row">
+      <img
+        class="max-w-20 max-h-20 logo-size-mobile rounded-full"
+        src="../assets/Logo-DV5v-HlD.png"
+        alt=""
+      />
+    </header>
+    <main>
+      <div class="flex-center-layout space-x-12 mt-9">
+        <button
+          class="button-desktop button-mobile w-[122px] h-[50px] md:w-[345px] md:h-[106px]"
+          id="login-button"
+        >
+          Login
+        </button>
+        <button
+          class="button-desktop button-mobile w-[122px] h-[50px] md:w-[345px] md:h-[106px]"
+          id="register-button"
+        >
+          Register
+        </button>
+      </div>
+
+      <div class="flex flex-row w-[100%] justify-center mx-auto mt-2">
+        <div
+          class="login-form-container form-container form-size-mobile form-size-desktop justify-center"
+        >
+          <h1 class="subheader-mobile subheader-desktop">Login</h1>
+          <form class="form" name="login" id="login-form">
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="email"
+                >Email</label
+              >
+              <input
+                class="input-mobile input-desktop"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col justify-center">
+              <label class="label-mobile label-desktop" for="password"
+                >Password</label
+              >
+              <input
+                class="input-mobile input-desktop"
+                type="password"
+                name="password"
+                id="password"
+                required
+              />
+            </div>
+            <div class="flex flex-row w-[100%] justify-center">
+              <button
+                class="button-mobile button-desktop px-2 border border-white bg-black"
+              >
+                Login
+              </button>
+            </div>
+            <div id="error-message"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="flex flex-row w-[100%] justify-center mx-auto mt-2">
+        <div
+          class="register-form-container form-container register-form-size-mobile register-form-size-desktop justify-center"
+        >
+          <h1 class="subheader-mobile subheader-desktop">Register</h1>
+          <form class="form" name="register" id="register-form" method="post">
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="name">Name</label>
+              <input
+                class="register-input input-mobile input-desktop"
+                id="name"
+                type="text"
+                name="name"
+                required
+                maxlength="20"
+                pattern="^[\w]+$"
+                autocomplete="name"
+                title="Please enter a username using only letters and numbers"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="email"
+                >Email</label
+              >
+              <input
+                class="register-input input-mobile input-desktop"
+                id="email"
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+                pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                title="Please enter a valid noroff.no or stud.noroff.no address"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="password"
+                >Password</label
+              >
+              <input
+                class="register-input input-mobile input-desktop"
+                type="password"
+                name="password"
+                autocomplete="password"
+                id="password"
+                required
+                minlength="8"
+              />
+            </div>
+            <div class="flex flex-row w-[100%] justify-center">
+              <button
+                class="button-mobile button-desktop px-2 border border-white bg-black"
+                id="register-button"
+              >
+                Register
+              </button>
+            </div>
+            <div id="error-message"></div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noroff FED2 JS2 CA</title>
+    <script type="module" crossorigin src="./assets/register-kQys6nNL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/register-CzWduOXH.css">
+  </head>
+
+  <body>
+    <header class="header-layout header-layout-mobile">
+      <div class="logo-div">
+        <img
+          class="logo max-w-20 max-h-20 logo-size-mobile rounded-full"
+          src="./assets/Logo-DV5v-HlD.png"
+          alt=""
+          style="width: 200px; height: 200px; border-radius: 50%"
+        />
+      </div>
+      <div class="hamburger hamburger-alignment">
+        <button class="hamburger hamburger-menu hide-on-desktop">
+          <img
+            class="min-w-7"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nO3WwQkAIAwDwIzezesWKuEO8jf4aBIAHpmSZEuS1w9QJK0/MiUBAPLBRTbj0zoatySpKTIlAQDywUU249M6GrckqSkyJQEg1x3OPOvHECpbTAAAAABJRU5ErkJggg=="
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="nav nav-col-desktop nav-alignment">
+        <nav class="nav nav-col-desktop nav-menu hidden space-x-4">
+          <ul class="nav-ul nav-layout-desktop justify-end md:justify-center">
+            <li>
+              <a
+                class="whitespace-nowrap nav-items-desktop nav-items-mobile"
+                href="/profile/"
+                >My Profile</a
+              >
+            </li>
+            <li>
+              <button
+                class="button-mobile button-desktop px-2"
+                id="logout-button"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="search search-col-desktop">
+        <input
+          class="search-mobile search-desktop"
+          type="text"
+          placeholder="Search..."
+        />
+      </div>
+    </header>
+
+    <main>
+      <div class="flex-center-layout">
+        <button
+          class="create-post-button button-mobile button-desktop px-10 py-2"
+        >
+          Create New Post
+        </button>
+      </div>
+
+      <div class="flex flex-row w-[100%] justify-center mx-auto mt-2">
+        <div
+          class="hidden create-post-form form-container form-size-mobile create-form-size-mobile create-form-size-desktop justify-center"
+        >
+          <form class="form" name="createPost" id="create-form" method="post">
+            <h1 class="subheader-mobile subheader-desktop">Create A Post</h1>
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="title"
+                >Title</label
+              >
+              <input
+                class="createpost-input input-mobile input-desktop"
+                id="title"
+                type="text"
+                name="title"
+                required
+                maxlength="20"
+                pattern="^[\w\s\W]+$"
+                autocomplete="title"
+                title="Please enter a title using only letters and numbers"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="body">Body</label>
+              <input
+                class="createpost-input input-mobile input-desktop"
+                id="body"
+                type="text"
+                name="body"
+                required
+                maxlength="100"
+                pattern="^[\w\s\W]+$"
+                autocomplete="body"
+                title="Please enter body using only letters and numbers"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="tags">Tags</label>
+              <input
+                class="input-mobile input-desktop"
+                type="text"
+                id="tags"
+                name="tags"
+                autocomplete="tags"
+                title=" Please enter tags"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="media"
+                >Media</label
+              >
+              <input
+                class="input-mobile input-desktop"
+                type="url"
+                id="media"
+                name="media"
+                optional
+                autocomplete="media"
+                title=" Please enter media url"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="label-mobile label-desktop" for="alt">alt</label>
+              <input
+                class="input-mobile input-desktop"
+                type="alt"
+                id="alt"
+                name="alt"
+                optional
+                autocomplete="alt"
+                title=" Please enter media alt text"
+              />
+            </div>
+
+            <button
+              class="button-mobile button-desktop px-2 border border-white bg-black"
+              id="createpost-button"
+            >
+              Create Post
+            </button>
+
+            <div id="error-message" style="color: red"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="flex-center-layout mt-2">
+        <div
+          class="w-[80%] sort-alignment button-mobile button-desktop sort-container"
+        >
+          <label class="" for="sort">Sort by:</label>
+          <select class="bg-black" name="sort" id="sort">
+            <option value="Gluten Free">Gluten Free</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Milk-Free">Milk Free</option>
+            <option value="Egg-Free">Egg Free</option>
+            <option value="Nut-Free">Nut Free</option>
+            <option value="Soy-Free">Soy Free</option>
+            <option value="No-Allergens">No Allergens</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="outer-post-container" id="posts-container"></div>
+    </main>
+  </body>
+</html>
