@@ -238,19 +238,17 @@ window.addEventListener("resize", handleNavMenu);
 
 //Display Create Form
 
-document.addEventListener("DOMContentLoaded", () => {
-  const createPostButton = document.querySelector(".create-post-button");
-  const createPostForm = document.querySelector(".create-post-form");
+const createPostButton = document.querySelector(".create-post-button");
+const createPostForm = document.querySelector(".create-post-form");
 
-  if (createPostButton && createPostForm) {
-    createPostButton.addEventListener("click", () => {
-      if (createPostForm.classList.contains("hidden")) {
-        createPostForm.classList.remove("hidden");
-        createPostForm.classList.add("show");
-      } else {
-        createPostForm.classList.remove("show");
-        createPostForm.classList.add("hidden");
-      }
-    });
-  }
-});
+if (createPostButton && createPostForm) {
+  createPostButton.addEventListener("click", () => {
+    if (createPostForm.classList.contains("hidden")) {
+      createPostForm.classList.remove("hidden");
+      createPostForm.classList.add("show");
+    } else {
+      createPostForm.classList.remove("show");
+      createPostForm.classList.add("hidden");
+    }
+  });
+}
