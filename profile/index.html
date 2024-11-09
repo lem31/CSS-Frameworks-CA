@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
 
@@ -7,11 +7,11 @@
     <title>Noroff FED2 CSS-Frameworks CA</title>
     <script type="module" src="../src/app.js" defer></script>
   </head>
-  <body>
+  <body class="dark:bg-black">
     <header class="header-layout header-layout-mobile">
       <div class="logo-div">
         <img
-          class="logo max-w-20 max-h-20 logo-size-mobile rounded-full"
+          class="dark:border-2 dark:border-white logo max-w-20 max-h-20 logo-size-mobile rounded-full"
           src="../Images/Logo.png"
           alt="Logo"
           style="width: 200px; height: 200px; border-radius: 50%"
@@ -32,7 +32,7 @@
           <ul class="nav-ul nav-layout-desktop justify-end md:justify-center">
             <li>
               <a
-                class="whitespace-nowrap nav-items-desktop nav-items-mobile"
+                class="whitespace-nowrap nav-items-desktop nav-items-mobile dark:text-white"
                 href="/feed/"
                 >Feed</a
               >
@@ -50,9 +50,15 @@
       </div>
     </header>
 
+    <button class="dark-mode-toggle px-4 py-2 bg-blue-500 text-white rounded">
+      Dark Mode/ Light Mode
+    </button>
+
     <main>
       <div class="flex-center-layout">
-        <h1 class="main-headers-mobile main-headers-desktop">My Profile</h1>
+        <h1 class="main-headers-mobile main-headers-desktop dark:text-white">
+          My Profile
+        </h1>
       </div>
 
       <div class="avatar-container flex-center-layout"></div>

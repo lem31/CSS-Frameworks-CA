@@ -97,12 +97,11 @@ function displayUserProfile(PROFILE) {
   FOLLOWING_LABEL.innerHTML = "Following: ";
   const FOLLOW_BUTTON = document.createElement("button");
   FOLLOW_BUTTON.innerHTML = "Follow";
-  const AVATAR_TEXT = document.createElement("span");
+
   const FOLLOWERS_LABEL = document.createElement("span");
   FOLLOWERS_LABEL.innerHTML = "Followers: ";
 
   FOLLOW_COUNT_CONTAINER.classList.add("follower-layout");
-  AVATAR_TEXT.classList.add("profile-image-text");
   USER_NAME.classList.add("username-mobile");
   USER_NAME.classList.add("username-desktop");
   USER_PROFILE.classList.add("flex-col-center-layout");
