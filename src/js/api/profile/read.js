@@ -94,6 +94,9 @@ function displayUserProfile(PROFILE) {
 
   const AVATAR_CONTAINER = document.querySelector(".avatar-container");
 
+  const FOLLOW_BUTTON = document.createElement("button");
+  FOLLOW_BUTTON.innerHTML = "Follow";
+
   AVATAR_CONTAINER.appendChild(AVATAR);
   AVATAR.classList.add("profile-image-box");
   BANNER.classList.add("profile-banner");
@@ -110,13 +113,9 @@ function displayUserProfile(PROFILE) {
   USER_PROFILE.appendChild(FOLLOWING_LABEL);
   FOLLOWING_LABEL.appendChild(NUMBER_FOLLOWING);
 
-  USER_PROFILE.appendChild(USER_EMAIL);
-  USER_PROFILE.appendChild(BIO);
-  // USER_PROFILE.appendChild(BANNER);
-
-  // USER_PROFILE.appendChild(NUMBER_OF_POSTS);
-  // USER_PROFILE.appendChild(NUMBER_OF_FOLLOWERS);
-  // USER_PROFILE.appendChild(NUMBER_FOLLOWING);
+  USER_PROFILE.appendChild(FOLLOW_BUTTON);
+  FOLLOW_BUTTON.classList.add("button-desktop");
+  FOLLOW_BUTTON.classList.add("button-mobile");
 
   USER_NAME.innerHTML = PROFILE.name || "N/A";
   USER_EMAIL.innerHTML = PROFILE.email || "N/A";

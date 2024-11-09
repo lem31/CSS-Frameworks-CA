@@ -212,29 +212,33 @@ getAllPosts();
 
 //HAMBURGER NAV
 
-const hamburgerMenu = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector(".nav-menu");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navMenu = document.getElementById("nav-menu");
 
 const handleNavMenu = () => {
-  if (window.innerWidth >= 641) {
-    navMenu.classList.remove("hidden");
-    navMenu.classList.add("flex");
-  } else {
-    navMenu.classList.add("hidden");
-    navMenu.classList.remove("flex");
+  if (navMenu) {
+    if (window.innerWidth >= 641) {
+      navMenu.classList.remove("hidden");
+      navMenu.classList.add("flex");
+    } else {
+      navMenu.classList.add("hidden");
+      navMenu.classList.remove("flex");
+    }
   }
 };
 
 handleNavMenu();
 
-hamburgerMenu.addEventListener("click", () => {
-  if (window.innerWidth < 641) {
-    navMenu.classList.toggle("hidden");
-    navMenu.classList.toggle("block");
-  }
-});
+if (hamburgerMenu && navMenu) {
+  hamburgerMenu.addEventListener("click", () => {
+    if (window.innerWidth < 641) {
+      navMenu.classList.toggle("hidden");
+      navMenu.classList.toggle("block");
+    }
+  });
 
-window.addEventListener("resize", handleNavMenu);
+  window.addEventListener("resize", handleNavMenu);
+}
 
 //Display Create Form
 

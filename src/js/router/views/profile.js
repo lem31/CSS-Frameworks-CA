@@ -64,8 +64,8 @@ export async function getUserPosts() {
 
 //HAMBURGER NAV
 
-const hamburgerMenu = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector(".nav-menu");
+const hamburgerMenu = document.getElementById("hamburger-menu-profile");
+const navMenu = document.getElementById("nav-menu-profile");
 
 const handleNavMenu = () => {
   if (window.innerWidth >= 641) {
