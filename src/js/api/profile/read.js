@@ -97,6 +97,12 @@ function displayUserProfile(PROFILE) {
   const FOLLOW_BUTTON = document.createElement("button");
   FOLLOW_BUTTON.innerHTML = "Follow";
 
+  const AVATAR_TEXT = document.createElement("span");
+  AVATAR_TEXT.innerHTML = "Profile Image";
+  AVATAR_TEXT.classList.add("profile-image-text");
+  USER_NAME.classList.add("username-mobile");
+  USER_NAME.classList.add("username-desktop");
+  USER_PROFILE.classList.add("flex-col-center-layout");
   AVATAR_CONTAINER.appendChild(AVATAR);
   AVATAR.classList.add("profile-image-box");
   BANNER.classList.add("profile-banner");
