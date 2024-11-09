@@ -14,10 +14,10 @@
 
 export default async function router(pathname = window.location.pathname) {
   switch (pathname) {
-    case "/":
+    case "/feed/":
       await import("./views/home.js");
       break;
-    case "/auth/":
+    case "/":
       await import("./views/auth.js");
       break;
     case "/auth/login/":

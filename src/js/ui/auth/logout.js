@@ -10,5 +10,5 @@
 export function removeTokenFromStorage() {
   localStorage.removeItem("accessToken");
 
-  window.location.href = "/auth/";
+  window.location.href = "/";
 }
