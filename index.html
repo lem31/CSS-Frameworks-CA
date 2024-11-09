@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="body-html">
+<html class="dark" lang="en" class="body-html">
   <head>
     <meta charset="UTF-8" />
 
@@ -7,18 +7,21 @@
     <title>Noroff FED2 CSS-Frameworks CA</title>
     <script type="module" src="src/app.js"></script>
   </head>
-  <body class="body-html body">
+  <body class="body-html body dark:bg-black">
     <header class="flex flex-row">
       <img
-        class="max-w-20 max-h-20 logo-size-mobile rounded-full"
+        class="max-w-20 max-h-20 logo-size-mobile rounded-full dark:border-2 dark:border-white"
         src="../Images/Logo.png"
         alt=""
       />
     </header>
     <main class="main">
+      <button class="dark-mode-toggle px-4 py-2 bg-blue-500 text-white rounded">
+        Toggle Dark Mode
+      </button>
       <div class="flex-center-layout space-x-12 mt-9">
         <button
-          class="button-desktop button-mobile w-[122px] h-[50px] md:w-[345px] md:h-[106px]"
+          class="dark:dark-mode-style button-desktop button-mobile w-[122px] h-[50px] md:w-[345px] md:h-[106px]"
           id="login-button"
         >
           Login

@@ -7,6 +7,7 @@ export default {
     "./profile/**/*.{html,js,ts,jsx,tsx}",
     "./feed/**/*.{html,js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     screens: {
       sm: "640px",
