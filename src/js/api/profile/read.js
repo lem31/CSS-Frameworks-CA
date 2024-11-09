@@ -125,10 +125,17 @@ function displayUserProfile(PROFILE) {
       ? PROFILE.banner.url
       : "../../../ui/images/default-banner.jpg";
 
-  AVATAR.src =
-    PROFILE.avatar && PROFILE.avatar.url
-      ? PROFILE.avatar.url
-      : "../../../ui/images/default-avatar.jpg";
+  if (PROFILE.avatar && PROFILE.avatar.url) {
+    AVATAR.src = PROFILE.avatar.url;
+  } else {
+    // AVATAR.src = "../../../ui/images/default-avatar.jpg";
+    const AVATAR_TEXT_BOX = document.createElement("div");
+    AVATAR_TEXT_BOX.classList.add("flex-center-display avatar");
+    const AVATAR_TEXT = document.createElement("p");
+    AVATAR_TEXT.innerHTML = "No avatar image found";
+    AVATAR_TEXT_BOX.appendChild(AVATAR_TEXT);
+    USER_PROFILE.appendChild(AVATAR_TEXT_BOX);
+  }
   NUMBER_OF_POSTS.innerHTML = PROFILE.posts ? PROFILE.posts.length : 0;
 
   NUMBER_OF_FOLLOWERS.innerHTML = PROFILE.followers
