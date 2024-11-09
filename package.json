@@ -1,5 +1,5 @@
 {
-  "name": "fed2-js2-ca",
+  "name": "fed2-css-frameworks-ca",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,9 @@
     "build:css": "postcss src/tailwind.css -o dist/tailwind.css && sass src/styles.scss dist/styles.scss --no-source-map",
     "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch && sass --watch src/styles.scss:dist/styles.scss --no-source-map",
 
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
