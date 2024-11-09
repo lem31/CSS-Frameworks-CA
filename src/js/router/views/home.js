@@ -35,9 +35,6 @@ onCreatePost();
 export class CreateAllPostElements {
   constructor(post, container) {
     const INDIVIDUAL_POST_CONTAINER = document.createElement("div");
-    INDIVIDUAL_POST_CONTAINER.classList.add("individual-post-box");
-    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-mobile");
-    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-desktop");
     const TEXT_BOX = document.createElement("div");
     const TITLE_BOX = document.createElement("div");
     const POST_TITLE = document.createElement("h2");
@@ -46,7 +43,12 @@ export class CreateAllPostElements {
     const TAGS_BOX = document.createElement("div");
     const POST_TAGS = document.createElement("p");
     const POST_IMAGE = document.createElement("img");
+    const VIEW_POST_BTN_BOX = document.createElement("div");
+    const VIEW_POST_BUTTON = document.createElement("button");
 
+    INDIVIDUAL_POST_CONTAINER.classList.add("individual-post-box");
+    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-mobile");
+    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-desktop");
     POST_IMAGE.classList.add("post-image");
     POST_IMAGE.classList.add("image-size-desktop");
     POST_IMAGE.classList.add("image-size-mobile");
@@ -54,14 +56,11 @@ export class CreateAllPostElements {
     TAGS_BOX.classList.add("flex-center-layout");
     POST_TITLE.classList.add("post-title-mobile");
     POST_TITLE.classList.add("post-title-desktop");
-
-    const VIEW_POST_BTN_BOX = document.createElement("div");
-    const VIEW_POST_BUTTON = document.createElement("button");
-    VIEW_POST_BUTTON.textContent = "View post";
     VIEW_POST_BUTTON.classList.add("button-mobile");
     VIEW_POST_BUTTON.classList.add("button-desktop");
     VIEW_POST_BUTTON.classList.add("px-4");
 
+    VIEW_POST_BUTTON.textContent = "View post";
     POST_TITLE.textContent = post.title || "No title available";
     POST_BODY.textContent = post.body || "No content available";
     POST_TAGS.textContent = post.tags
