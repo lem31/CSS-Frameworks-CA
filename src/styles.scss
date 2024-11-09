@@ -11,6 +11,21 @@
   width: 100%;
 }
 
+.body-html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1; 
+}
 
 .follower-layout{
   display: flex;
@@ -19,6 +34,11 @@
   justify-content: center;
   width: 100%;
   
+}
+
+.footer{
+  background-color: black;
+  width: 100%;
 }
 
 .edit-delete-buttons{
