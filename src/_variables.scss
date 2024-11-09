@@ -21,11 +21,4 @@ $breakpoint-medium: 641px;
 
 $grid-columns-3: 3;
 
-@layer components {
-  .dark-mode-style {
-    border: 3px solid $tertiary-color;
-    &:active {
-      border: 3px solid $secondary-color;
-    }
-  }
-}
+
