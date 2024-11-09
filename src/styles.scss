@@ -11,6 +11,22 @@
   width: 100%;
 }
 
+
+.follower-layout{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.follower-layout-span{
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
 @mixin grid-container-mobile{
   display: grid;
   grid-template-columns: repeat(3, 1fr);

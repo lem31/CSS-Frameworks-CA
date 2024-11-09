@@ -89,39 +89,43 @@ function displayUserProfile(PROFILE) {
   const BANNER = document.createElement("img");
   const AVATAR = document.createElement("img");
   const NUMBER_OF_POSTS = document.createElement("p");
-  const NUMBER_OF_FOLLOWERS = document.createElement("p");
-  const NUMBER_FOLLOWING = document.createElement("p");
-
+  const NUMBER_OF_FOLLOWERS = document.createElement("span");
+  const NUMBER_FOLLOWING = document.createElement("span");
+  const FOLLOW_COUNT_CONTAINER = document.createElement("div");
   const AVATAR_CONTAINER = document.querySelector(".avatar-container");
-
+  const FOLLOWING_LABEL = document.createElement("span");
+  FOLLOWING_LABEL.innerHTML = "Following: ";
   const FOLLOW_BUTTON = document.createElement("button");
   FOLLOW_BUTTON.innerHTML = "Follow";
-
   const AVATAR_TEXT = document.createElement("span");
-  AVATAR_TEXT.innerHTML = "Profile Image";
+  const FOLLOWERS_LABEL = document.createElement("span");
+  FOLLOWERS_LABEL.innerHTML = "Followers: ";
+
+  FOLLOW_COUNT_CONTAINER.classList.add("follower-layout");
   AVATAR_TEXT.classList.add("profile-image-text");
   USER_NAME.classList.add("username-mobile");
   USER_NAME.classList.add("username-desktop");
   USER_PROFILE.classList.add("flex-col-center-layout");
-  AVATAR_CONTAINER.appendChild(AVATAR);
   AVATAR.classList.add("profile-image-box");
   BANNER.classList.add("profile-banner");
   AVATAR.classList.add("profile-avatar");
+  FOLLOW_BUTTON.classList.add("button-desktop");
+  FOLLOW_BUTTON.classList.add("button-mobile");
+  FOLLOW_BUTTON.classList.add("px-4");
+
   USER_PROFILE.appendChild(AVATAR_CONTAINER);
   USER_PROFILE.appendChild(USER_NAME);
-  const FOLLOWERS_LABEL = document.createElement("span");
-  FOLLOWERS_LABEL.innerHTML = "Followers: ";
-  USER_PROFILE.appendChild(FOLLOWERS_LABEL);
-  FOLLOWERS_LABEL.appendChild(NUMBER_OF_FOLLOWERS);
+  AVATAR_CONTAINER.appendChild(AVATAR);
+  FOLLOW_COUNT_CONTAINER.appendChild(FOLLOWERS_LABEL);
+  FOLLOW_COUNT_CONTAINER.appendChild(NUMBER_OF_FOLLOWERS);
+  FOLLOW_COUNT_CONTAINER.appendChild(FOLLOWING_LABEL);
+  FOLLOW_COUNT_CONTAINER.appendChild(NUMBER_FOLLOWING);
 
-  const FOLLOWING_LABEL = document.createElement("span");
-  FOLLOWING_LABEL.innerHTML = "Following: ";
-  USER_PROFILE.appendChild(FOLLOWING_LABEL);
+  USER_PROFILE.appendChild(FOLLOW_COUNT_CONTAINER);
+
   FOLLOWING_LABEL.appendChild(NUMBER_FOLLOWING);
 
   USER_PROFILE.appendChild(FOLLOW_BUTTON);
-  FOLLOW_BUTTON.classList.add("button-desktop");
-  FOLLOW_BUTTON.classList.add("button-mobile");
 
   USER_NAME.innerHTML = PROFILE.name || "N/A";
   USER_EMAIL.innerHTML = PROFILE.email || "N/A";
