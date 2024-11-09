@@ -124,6 +124,7 @@ export class CreateMyPostsElements extends CreateAllPostElements {
     const editButton = document.createElement("button");
     const deleteButton = document.createElement("button");
     const POST_CONTAINER = document.createElement("div");
+    const BUTTON_CONTAINER = document.createElement("div");
 
     INDIVIDUAL_POST_CONTAINER.classList.add("my-post");
 
@@ -140,10 +141,20 @@ export class CreateMyPostsElements extends CreateAllPostElements {
 
     deleteButton.classList.add("delete-button");
 
-    deleteButton.addEventListener("click", deletePost);
+    editButton.classList.add("button-mobile");
+    editButton.classList.add("button-desktop");
+    editButton.classList.add("px-4");
 
-    POST_CONTAINER.appendChild(editButton);
-    POST_CONTAINER.appendChild(deleteButton);
+    deleteButton.classList.add("button-mobile");
+    deleteButton.classList.add("button-desktop");
+    deleteButton.classList.add("px-4");
+
+    BUTTON_CONTAINER.classList.add("edit-delete-buttons");
+
+    deleteButton.addEventListener("click", deletePost);
+    BUTTON_CONTAINER.appendChild(editButton);
+    BUTTON_CONTAINER.appendChild(deleteButton);
+    POST_CONTAINER.appendChild(BUTTON_CONTAINER);
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_CONTAINER);
 
     return INDIVIDUAL_POST_CONTAINER;

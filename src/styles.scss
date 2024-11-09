@@ -21,10 +21,13 @@
   
 }
 
-.follower-layout-span{
-  display: inline;
-  margin: 0;
-  padding: 0;
+.edit-delete-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  margin-top: 10px;
 }
 
 @mixin grid-container-mobile{
@@ -187,6 +190,8 @@ height: 211px;
     font-size: 20px;
     justify-self: center;
   }
+
+
 .post-title-mobile{
   font-family: $font-family;
     font-size: 20px;
