@@ -59,6 +59,14 @@ export class CreateAllPostElements {
     VIEW_POST_BUTTON.classList.add("button-mobile");
     VIEW_POST_BUTTON.classList.add("button-desktop");
     VIEW_POST_BUTTON.classList.add("px-4");
+    POST_BODY.classList.add("post-text-mobile");
+    POST_BODY.classList.add("post-text-desktop");
+    POST_TAGS.classList.add("post-text-mobile");
+    POST_TAGS.classList.add("post-text-desktop");
+    POST_BODY.classList.add("dark:text-white");
+    POST_TAGS.classList.add("dark:text-white");
+    POST_TITLE.classList.add("dark:text-white");
+    VIEW_POST_BUTTON.classList.add("dark:dark-mode-style");
 
     VIEW_POST_BUTTON.textContent = "View post";
     POST_TITLE.textContent = post.title || "No title available";
@@ -79,7 +87,6 @@ export class CreateAllPostElements {
     BODY_BOX.appendChild(POST_BODY);
     TAGS_BOX.appendChild(POST_TAGS);
     TAGS_BOX.innerHTML = `<strong>Tags:</strong> ${TAGS_BOX.innerHTML}`;
-
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_IMAGE);
     container.appendChild(TEXT_BOX);
     container.appendChild(INDIVIDUAL_POST_CONTAINER);
@@ -143,10 +150,12 @@ export class CreateMyPostsElements extends CreateAllPostElements {
     editButton.classList.add("button-mobile");
     editButton.classList.add("button-desktop");
     editButton.classList.add("px-4");
+    editButton.classList.add("dark:dark-mode-style");
 
     deleteButton.classList.add("button-mobile");
     deleteButton.classList.add("button-desktop");
     deleteButton.classList.add("px-4");
+    deleteButton.classList.add("dark:dark-mode-style");
 
     BUTTON_CONTAINER.classList.add("edit-delete-buttons");
 

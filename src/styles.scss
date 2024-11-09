@@ -19,6 +19,8 @@
   }
 }
 
+
+
 .dark-mode-styles {
   @apply dark-mode-style;
 }
@@ -299,6 +301,12 @@
     color: $primary-color;
     font-weight: bold;
   }
+
+  .post-text-mobile{
+    font-family: $font-family-secondary;
+    font-size: 16px;
+    color: $primary-color;
+  }
 }
 
 @mixin grid-container {
@@ -441,6 +449,12 @@
     font-size: 24px;
     color: $primary-color;
     font-weight: bold;
+  }
+
+  .post-text-desktop{
+    font-family: $font-family-secondary;
+    font-size: 18px;
+    color: $primary-color;
   }
 
   .profile-image-box {

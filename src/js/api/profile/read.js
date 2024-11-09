@@ -97,20 +97,30 @@ function displayUserProfile(PROFILE) {
   FOLLOWING_LABEL.innerHTML = "Following: ";
   const FOLLOW_BUTTON = document.createElement("button");
   FOLLOW_BUTTON.innerHTML = "Follow";
-
   const FOLLOWERS_LABEL = document.createElement("span");
   FOLLOWERS_LABEL.innerHTML = "Followers: ";
 
   FOLLOW_COUNT_CONTAINER.classList.add("follower-layout");
   USER_NAME.classList.add("username-mobile");
   USER_NAME.classList.add("username-desktop");
+  USER_EMAIL.classList.add("dark:text-white");
   USER_PROFILE.classList.add("flex-col-center-layout");
   AVATAR.classList.add("profile-image-box");
+  AVATAR.classList.add("dark:border-2");
+  AVATAR.classList.add("dark:border-solid");
+  AVATAR.classList.add("dark:border-white");
   BANNER.classList.add("profile-banner");
   AVATAR.classList.add("profile-avatar");
+  USER_NAME.classList.add("dark:text-white");
+  FOLLOWING_LABEL.classList.add("dark:text-white");
+  FOLLOWERS_LABEL.classList.add("dark:text-white");
+  NUMBER_FOLLOWING.classList.add("dark:text-white");
+  NUMBER_OF_FOLLOWERS.classList.add("dark:text-white");
   FOLLOW_BUTTON.classList.add("button-desktop");
   FOLLOW_BUTTON.classList.add("button-mobile");
   FOLLOW_BUTTON.classList.add("px-4");
+  FOLLOW_BUTTON.classList.add("dark:dark-mode-style");
+  FOLLOW_BUTTON.classList.add("mt-2");
 
   USER_PROFILE.appendChild(AVATAR_CONTAINER);
   USER_PROFILE.appendChild(USER_NAME);

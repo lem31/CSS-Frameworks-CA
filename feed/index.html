@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
 
@@ -8,11 +8,11 @@
     <script type="module" src="../src/app.js"></script>
   </head>
 
-  <body>
+  <body class="dark:bg-black">
     <header class="header-layout header-layout-mobile">
       <div class="logo-div">
         <img
-          class="logo max-w-20 max-h-20 logo-size-mobile rounded-full"
+          class="dark:border-2 dark:border-white logo max-w-20 max-h-20 logo-size-mobile rounded-full"
           src="../Images/Logo.png"
           alt=""
           style="width: 200px; height: 200px; border-radius: 50%"
@@ -33,14 +33,14 @@
           <ul class="nav-ul nav-layout-desktop justify-end md:justify-center">
             <li>
               <a
-                class="whitespace-nowrap nav-items-desktop nav-items-mobile"
+                class="whitespace-nowrap nav-items-desktop nav-items-mobile dark:text-white"
                 href="/profile/"
                 >My Profile</a
               >
             </li>
             <li>
               <button
-                class="button-mobile button-desktop px-2"
+                class="dark:dark-mode-style button-mobile button-desktop px-2"
                 id="logout-button"
               >
                 Logout
@@ -50,7 +50,7 @@
         </nav>
       </div>
 
-      <div class="search search-col-desktop">
+      <div class="search search-col-desktop dark:border-2 dark:border-white">
         <input
           class="search-mobile search-desktop"
           type="text"
@@ -59,10 +59,16 @@
       </div>
     </header>
 
+    <button
+      class="dark-mode-toggle text-sm px-2 py-2 bg-blue-500 text-white rounded"
+    >
+      Dark Mode/ Light Mode
+    </button>
+
     <main>
       <div class="flex-center-layout">
         <button
-          class="create-post-button button-mobile button-desktop px-10 py-2"
+          class="dark:dark-mode-style create-post-button button-mobile button-desktop px-10 py-2"
         >
           Create New Post
         </button>
@@ -160,7 +166,7 @@
 
       <div class="flex-center-layout mt-2">
         <div
-          class="w-[80%] sort-alignment button-mobile button-desktop sort-container"
+          class="w-[80%] sort-alignment button-mobile button-desktop sort-container dark:dark-mode-style"
         >
           <label class="" for="sort">Sort by:</label>
           <select class="bg-black" name="sort" id="sort">

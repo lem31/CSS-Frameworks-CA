@@ -260,6 +260,11 @@
     color: #000000;
     font-weight: bold;
   }
+  .post-text-mobile {
+    font-family: "sans-serif";
+    font-size: 16px;
+    color: #000000;
+  }
 }
 @media (min-width: 641px) {
   .footer-text-desktop {
@@ -382,6 +387,11 @@
     font-size: 24px;
     color: #000000;
     font-weight: bold;
+  }
+  .post-text-desktop {
+    font-family: "sans-serif";
+    font-size: 18px;
+    color: #000000;
   }
   .profile-image-box {
     width: 10rem;

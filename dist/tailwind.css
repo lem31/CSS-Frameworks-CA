@@ -637,12 +637,19 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .dark\:border-2:is(.dark *) {
   border-width: 2px;
+}
+.dark\:border-solid:is(.dark *) {
+  border-style: solid;
 }
 .dark\:border-white:is(.dark *) {
   --tw-border-opacity: 1;
