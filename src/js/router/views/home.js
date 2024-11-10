@@ -65,6 +65,7 @@ export class CreateAllPostElements {
     POST_TAGS.classList.add("post-text-desktop");
     POST_BODY.classList.add("dark:text-white");
     POST_TAGS.classList.add("dark:text-white");
+    TAGS_BOX.classList.add("dark:text-white");
     POST_TITLE.classList.add("dark:text-white");
     VIEW_POST_BUTTON.classList.add("dark:dark-mode-style");
     POST_BODY.classList.add("post-text-alignment");
