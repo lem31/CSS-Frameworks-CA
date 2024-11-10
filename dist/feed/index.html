@@ -5,16 +5,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 CSS-Frameworks CA</title>
-    <script
-      type="module"
-      crossorigin
-      src="/CSS-Frameworks-CA/assets/register-BGvxjAmX.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      crossorigin
-      href="/CSS-Frameworks-CA/assets/register-Cp1k8QAX.css"
-    />
+    <script type="module" crossorigin src="../assets/register-C-NCrhg_.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/register-CA2IKc62.css">
   </head>
 
   <body class="dark:bg-black">
@@ -22,19 +14,19 @@
       <div class="logo-div">
         <img
           class="dark:border-2 dark:border-white logo max-w-20 max-h-20 logo-size-mobile rounded-full"
-          src="/CSS-Frameworks-CA/assets/Logo-DV5v-HlD.png"
+          src="../assets/Logo-DV5v-HlD.png"
           alt=""
           style="width: 200px; height: 200px; border-radius: 50%"
         />
       </div>
       <div class="hamburger hamburger-alignment">
-        <button class="hamburger hide-on-desktop" id="hamburger-menu">
-          <img
-            class="min-w-7"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nO3WwQkAIAwDwIzezesWKuEO8jf4aBIAHpmSZEuS1w9QJK0/MiUBAPLBRTbj0zoatySpKTIlAQDywUU249M6GrckqSkyJQEg1x3OPOvHECpbTAAAAABJRU5ErkJggg=="
-            alt=""
-          />
-        </button>
+    <button class="hamburger hide-on-desktop" id="hamburger-menu">
+      <img
+        class="dark:filter dark:invert min-w-7"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nO3WwQkAIAwDwIzezesWKuEO8jf4aBIAHpmSZEuS1w9QJK0/MiUBAPLBRTbj0zoatySpKTIlAQDywUU249M6GrckqSkyJQEg1x3OPOvHECpbTAAAAABJRU5ErkJggg=="
+        alt=""
+      />
+    </button>
       </div>
 
       <div class="nav nav-col-desktop nav-alignment">
@@ -59,7 +51,7 @@
         </nav>
       </div>
 
-      <div class="search search-col-desktop dark:border-2 dark:border-white">
+      <div class="search-mobile search-desktop">
         <input
           class="search-mobile search-desktop"
           type="text"
@@ -68,12 +60,14 @@
       </div>
     </header>
 
+    <div class="flex flex-row justify-start items-start mb-2">
     <button
-      class="dark-mode-toggle dark:dark-mode-style button-mobile button-desktop px-2 py-2"
+      class="dark-mode-toggle dark:dark-mode-style button-mobile button-desktop px-2 py-2 "
+      id="dark-mode-toggle"
     >
       Dark Mode/ Light Mode
     </button>
-
+  </div>
     <main>
       <div class="flex-center-layout">
         <button
@@ -84,14 +78,11 @@
       </div>
 
       <div class="flex flex-row w-[100%] justify-center mx-auto mt-2">
-        <div class="hidden create-post-form form-container justify-center">
-          <form
-            class="form create-form-size-mobile create-form-size-desktop"
-            name="createPost"
-            id="create-form"
-            method="post"
-          >
-            <h1 class="subheader-mobile subheader-desktop">Create A Post</h1>
+        <div
+          class="hidden create-post-form form-container form-size-mobile create-form-size-mobile create-form-size-desktop justify-center"
+        >
+          <form class="form" name="createPost" id="create-form" method="post">
+            <h1 class="subheader-mobile subheader-desktop">Create A Post</form></h1>
             <div class="flex flex-col">
               <label class="label-mobile label-desktop" for="title"
                 >Title</label
@@ -163,16 +154,15 @@
                 title=" Please enter media alt text"
               />
             </div>
-            <div class="mt-2">
-              <button
-                class="button-mobile button-desktop px-2 border border-white bg-black"
-                id="createpost-button"
-              >
-                Create Post
-              </button>
-            </div>
 
-            <div id="error-message" style="color: red"></div>
+            <button
+              class="button-mobile button-desktop px-2 border border-white bg-black"
+              id="createpost-button"
+            >
+              Create Post
+            </button>
+
+            <div id="error-message" class="text-red"></div>
           </form>
         </div>
       </div>
