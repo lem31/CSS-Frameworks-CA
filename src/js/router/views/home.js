@@ -75,6 +75,7 @@ export class CreateAllPostElements {
       "dark:dark-mode-bottom-border-post"
     );
     VIEW_POST_BTN_BOX.classList.add("flex-center-layout");
+    VIEW_POST_BTN_BOX.classList.add("mt-2");
 
     VIEW_POST_BUTTON.textContent = "View post";
     POST_TITLE.textContent = post.title || "No title available";
