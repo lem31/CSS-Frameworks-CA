@@ -70,6 +70,11 @@ export class CreateAllPostElements {
     POST_BODY.classList.add("post-text-alignment");
     POST_BODY.classList.add("post-body-width-mobile");
     POST_BODY.classList.add("post-body-width-desktop");
+    INDIVIDUAL_POST_CONTAINER.classList.add("bottom-border-post");
+    INDIVIDUAL_POST_CONTAINER.classList.add(
+      "dark:dark-mode-bottom-border-post"
+    );
+    VIEW_POST_BTN_BOX.classList.add("flex-center-layout");
 
     VIEW_POST_BUTTON.textContent = "View post";
     POST_TITLE.textContent = post.title || "No title available";
@@ -93,7 +98,7 @@ export class CreateAllPostElements {
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_IMAGE);
     container.appendChild(TEXT_BOX);
     container.appendChild(INDIVIDUAL_POST_CONTAINER);
-    container.appendChild(VIEW_POST_BTN_BOX);
+    INDIVIDUAL_POST_CONTAINER.appendChild(VIEW_POST_BTN_BOX);
 
     POST_IMAGE.addEventListener("click", () => {
       window.location.href = `/post/?id=${post.id}`;

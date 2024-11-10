@@ -18,6 +18,19 @@
   }
 }
 
+.bottom-border-post{
+  border-bottom: 3px solid $primary-color;
+  padding-bottom: 10px;
+}
+
+@layer components{
+  .dark-mode-bottom-border-post{
+    border-bottom: 3px solid $tertiary-color;
+  }
+}
+
+
+
 .body-html {
   margin: 0;
   padding: 0;
