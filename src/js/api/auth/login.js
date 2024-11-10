@@ -51,7 +51,7 @@ export async function login(event) {
     if (INFO) {
       localStorage.setItem("accessToken", INFO.accessToken);
       localStorage.setItem("user", JSON.stringify(INFO));
-      window.location.href = "/profile/";
+      window.location.href = "profile/";
 
       if (INFO.error) {
         ERROR_MESSAGE.innerHTML =
