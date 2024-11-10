@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
   "deploy": "gh-pages -d dist",
-     "watch:styles": "nodemon -e scss -x \"npm run build:css\""
+ "watch:styles": "nodemon -e scss -x \"npm run build:css\""
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
