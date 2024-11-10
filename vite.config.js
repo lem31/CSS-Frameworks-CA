@@ -20,6 +20,8 @@ export default defineConfig({
         main: resolve(__dirname, "./feed/index.html"),
         auth: resolve(__dirname, "./index.html"),
         profile: resolve(__dirname, "./profile/index.html"),
+        post: resolve(__dirname, "./post/index.html"),
+        editPost: resolve(__dirname, "./post/edit/index.html"),
       },
     },
   },
