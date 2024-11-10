@@ -10,7 +10,7 @@
     "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch && sass --watch src/styles.scss:dist/styles.scss --no-source-map",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "css-frameworks -d dist",
      "watch:styles": "nodemon -e scss -x \"npm run build:css\""
   },
   "devDependencies": {
