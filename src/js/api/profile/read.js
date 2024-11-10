@@ -83,6 +83,7 @@ export async function getUserProfile() {
 
 function displayUserProfile(PROFILE) {
   const USER_PROFILE = document.getElementById("my-profile");
+  const PROFILE_BOX = document.getElementById("profile-box");
   const USER_NAME = document.createElement("h2");
   const USER_EMAIL = document.createElement("p");
   const BIO = document.createElement("p");
@@ -96,9 +97,11 @@ function displayUserProfile(PROFILE) {
   const FOLLOWING_LABEL = document.createElement("span");
   FOLLOWING_LABEL.innerHTML = "Following: ";
   const FOLLOW_BUTTON = document.createElement("button");
+  const FOLLOW_BUTTON_BOX = document.createElement("div");
   FOLLOW_BUTTON.innerHTML = "Follow";
   const FOLLOWERS_LABEL = document.createElement("span");
   FOLLOWERS_LABEL.innerHTML = "Followers: ";
+  const USER_NAME_BOX = document.createElement("div");
 
   FOLLOW_COUNT_CONTAINER.classList.add("follower-layout");
   USER_NAME.classList.add("username-mobile");
@@ -121,20 +124,24 @@ function displayUserProfile(PROFILE) {
   FOLLOW_BUTTON.classList.add("px-4");
   FOLLOW_BUTTON.classList.add("dark:dark-mode-style");
   FOLLOW_BUTTON.classList.add("mt-2");
+  FOLLOW_BUTTON_BOX.classList.add("flex-center-layout");
+  USER_NAME_BOX.classList.add("flex-center-layout");
+  PROFILE_BOX.classList.add("dark:dark-mode-style-profile-box");
 
-  USER_PROFILE.appendChild(AVATAR_CONTAINER);
-  USER_PROFILE.appendChild(USER_NAME);
+  PROFILE_BOX.appendChild(AVATAR_CONTAINER);
+  PROFILE_BOX.appendChild(USER_NAME_BOX);
+  PROFILE_BOX.appendChild(FOLLOW_COUNT_CONTAINER);
+  PROFILE_BOX.appendChild(FOLLOW_BUTTON_BOX);
   AVATAR_CONTAINER.appendChild(AVATAR);
   FOLLOW_COUNT_CONTAINER.appendChild(FOLLOWERS_LABEL);
   FOLLOW_COUNT_CONTAINER.appendChild(NUMBER_OF_FOLLOWERS);
   FOLLOW_COUNT_CONTAINER.appendChild(FOLLOWING_LABEL);
   FOLLOW_COUNT_CONTAINER.appendChild(NUMBER_FOLLOWING);
-
-  USER_PROFILE.appendChild(FOLLOW_COUNT_CONTAINER);
-
+  PROFILE_BOX.appendChild(FOLLOW_COUNT_CONTAINER);
   FOLLOWING_LABEL.appendChild(NUMBER_FOLLOWING);
-
-  USER_PROFILE.appendChild(FOLLOW_BUTTON);
+  PROFILE_BOX.appendChild(FOLLOW_BUTTON);
+  FOLLOW_BUTTON_BOX.appendChild(FOLLOW_BUTTON);
+  USER_NAME_BOX.appendChild(USER_NAME);
 
   USER_NAME.innerHTML = PROFILE.name || "N/A";
   USER_EMAIL.innerHTML = PROFILE.email || "N/A";

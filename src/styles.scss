@@ -9,6 +9,13 @@
   width: 100%;
 }
 
+
+@layer components {
+  .dark-mode-style-profile-box {
+    border: 3px solid $tertiary-color;
+  }
+}
+
 @layer components {
   .dark-mode-style {
     border: 3px solid $tertiary-color;
@@ -165,6 +172,14 @@
 }
 
 @media (max-width: $breakpoint-small) {
+
+.profile-box-mobile{
+  border: 3px solid $primary-color;
+  width: 50%;
+}
+
+
+
 .post-body-width-mobile{
   max-width: 300px;
 }
@@ -344,7 +359,15 @@
 
 @media (min-width: $breakpoint-medium) {
 
+  .profile-box-desktop{
+    border: 3px solid $primary-color;
+    width: 50%;
+   
+  }
 
+
+
+  
   .post-body-width-desktop{
     max-width: 400px;
   }

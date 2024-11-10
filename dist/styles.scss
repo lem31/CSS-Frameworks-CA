@@ -3,11 +3,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind components;
 @layer components {
+  .dark-mode-style-profile-box {
+    border: 3px solid #ffffff;
+  }
+}
+@layer components {
   .dark-mode-style {
     border: 3px solid #ffffff;
   }
   .dark-mode-style:active {
     border: 3px solid #c1ff72;
+  }
+}
+.bottom-border-post {
+  border-bottom: 3px solid #000000;
+  padding-bottom: 10px;
+}
+
+@layer components {
+  .dark-mode-bottom-border-post {
+    border-bottom: 3px solid #ffffff;
   }
 }
 .body-html {
@@ -130,6 +145,13 @@
 }
 
 @media (max-width: 640px) {
+  .profile-box-mobile {
+    border: 3px solid #000000;
+    width: 50%;
+  }
+  .post-body-width-mobile {
+    max-width: 300px;
+  }
   .footer-text-mobile {
     font-family: "Alumni Sans", sans-serif;
     font-size: 14px;
@@ -273,6 +295,13 @@
   }
 }
 @media (min-width: 641px) {
+  .profile-box-desktop {
+    border: 3px solid #000000;
+    width: 50%;
+  }
+  .post-body-width-desktop {
+    max-width: 400px;
+  }
   .footer-text-desktop {
     font-family: "Alumni Sans", sans-serif;
     font-size: 16px;
