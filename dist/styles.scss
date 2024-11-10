@@ -151,7 +151,7 @@
   }
   .hamburger-alignment {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
   }
   .hide-on-mobile {
@@ -162,12 +162,16 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+  .header-layout-profile-mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
   .logo {
     grid-column: 1/2;
     grid-row: 1/2;
   }
   .hamburger {
-    grid-column: 3/4;
+    grid-column: 3/3;
     grid-row: 1/2;
   }
   .nav {
@@ -220,7 +224,7 @@
     color: #ffffff;
   }
   .search-mobile {
-    width: 347px;
+    width: 200px;
     height: 40px;
     background-color: #ffffff;
     border: 3px solid #000000;
