@@ -213,11 +213,6 @@
     align-items: start;
   }
 
-  .search {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-  }
-
   .form-size-mobile {
     width: 224px;
     height: 220px;
@@ -262,6 +257,8 @@
   .search-mobile {
     width: 200px;
     height: 40px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 2;
     background-color: $tertiary-color;
     border: 3px solid $primary-color;
     color: $tertiary-color;
@@ -436,6 +433,8 @@
   .search-desktop {
     width: 300px;
     height: 40px;
+    grid-column: 3 / 3;
+    grid-row: 1 / 2;
     background-color: $tertiary-color;
     border: 3px solid $primary-color;
     color: $tertiary-color;
@@ -443,11 +442,6 @@
       background-color: $primary-color;
       border: 3px solid $secondary-color;
     }
-  }
-
-  .search-col-desktop {
-    grid-column: 3/3;
-    grid-row: 1/2;
   }
 
   .post-title-desktop {
