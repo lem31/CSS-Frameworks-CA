@@ -68,6 +68,8 @@ export class CreateAllPostElements {
     POST_TITLE.classList.add("dark:text-white");
     VIEW_POST_BUTTON.classList.add("dark:dark-mode-style");
     POST_BODY.classList.add("post-text-alignment");
+    POST_BODY.classList.add("post-body-width-mobile");
+    POST_BODY.classList.add("post-body-width-desktop");
 
     VIEW_POST_BUTTON.textContent = "View post";
     POST_TITLE.textContent = post.title || "No title available";

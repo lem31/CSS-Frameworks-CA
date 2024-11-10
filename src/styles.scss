@@ -63,7 +63,9 @@
 
 .post-text-alignment {
   text-align: center;
+
 }
+
 
 .third-col-box-footer {
   grid-column: 3 / 3;
@@ -150,6 +152,10 @@
 }
 
 @media (max-width: $breakpoint-small) {
+.post-body-width-mobile{
+  max-width: 300px;
+}
+
   .footer-text-mobile {
     font-family: $font-family;
     font-size: $footer-font-size-mobile;
@@ -324,6 +330,12 @@
 }
 
 @media (min-width: $breakpoint-medium) {
+
+
+  .post-body-width-desktop{
+    max-width: 400px;
+  }
+
   .footer-text-desktop {
     font-family: $font-family;
     font-size: $footer-font-size-desktop;
