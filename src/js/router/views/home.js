@@ -3,9 +3,11 @@ import { displayPostIDInURLOnEditPage } from "../../ui/post/update.js";
 import { logout } from "../../ui/global/logout.js";
 import { deletePost } from "../../ui/post/delete.js";
 import { headers } from "../../api/headers.js";
+import { onCreatePost } from "../../ui/post/create";
 
 authGuard();
 logout();
+onCreatePost();
 
 // Create all posts elements class/function
 
@@ -33,18 +35,50 @@ logout();
 export class CreateAllPostElements {
   constructor(post, container) {
     const INDIVIDUAL_POST_CONTAINER = document.createElement("div");
-    INDIVIDUAL_POST_CONTAINER.classList.add("individual-post-box");
-
+    const TEXT_BOX = document.createElement("div");
+    const TITLE_BOX = document.createElement("div");
     const POST_TITLE = document.createElement("h2");
     const POST_BODY = document.createElement("p");
+    const BODY_BOX = document.createElement("div");
+    const TAGS_BOX = document.createElement("div");
     const POST_TAGS = document.createElement("p");
     const POST_IMAGE = document.createElement("img");
-
-    POST_IMAGE.classList.add("post-image");
-
+    const VIEW_POST_BTN_BOX = document.createElement("div");
     const VIEW_POST_BUTTON = document.createElement("button");
-    VIEW_POST_BUTTON.textContent = "View post";
 
+    INDIVIDUAL_POST_CONTAINER.classList.add("individual-post-box");
+    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-mobile");
+    INDIVIDUAL_POST_CONTAINER.classList.add("post-container-desktop");
+    POST_IMAGE.classList.add("post-image");
+    POST_IMAGE.classList.add("image-size-desktop");
+    POST_IMAGE.classList.add("image-size-mobile");
+    TITLE_BOX.classList.add("flex-center-layout");
+    TAGS_BOX.classList.add("flex-center-layout");
+    POST_TITLE.classList.add("post-title-mobile");
+    POST_TITLE.classList.add("post-title-desktop");
+    VIEW_POST_BUTTON.classList.add("button-mobile");
+    VIEW_POST_BUTTON.classList.add("button-desktop");
+    VIEW_POST_BUTTON.classList.add("px-4");
+    POST_BODY.classList.add("post-text-mobile");
+    POST_BODY.classList.add("post-text-desktop");
+    POST_TAGS.classList.add("post-text-mobile");
+    POST_TAGS.classList.add("post-text-desktop");
+    POST_BODY.classList.add("dark:text-white");
+    POST_TAGS.classList.add("dark:text-white");
+    TAGS_BOX.classList.add("dark:text-white");
+    POST_TITLE.classList.add("dark:text-white");
+    VIEW_POST_BUTTON.classList.add("dark:dark-mode-style");
+    POST_BODY.classList.add("post-text-alignment");
+    POST_BODY.classList.add("post-body-width-mobile");
+    POST_BODY.classList.add("post-body-width-desktop");
+    INDIVIDUAL_POST_CONTAINER.classList.add("bottom-border-post");
+    INDIVIDUAL_POST_CONTAINER.classList.add(
+      "dark:dark-mode-bottom-border-post"
+    );
+    VIEW_POST_BTN_BOX.classList.add("flex-center-layout");
+    VIEW_POST_BTN_BOX.classList.add("mt-2");
+
+    VIEW_POST_BUTTON.textContent = "View post";
     POST_TITLE.textContent = post.title || "No title available";
     POST_BODY.textContent = post.body || "No content available";
     POST_TAGS.textContent = post.tags
@@ -55,14 +89,18 @@ export class CreateAllPostElements {
     } else {
       POST_IMAGE.alt = "No image available";
     }
-
-    INDIVIDUAL_POST_CONTAINER.appendChild(POST_TITLE);
-    INDIVIDUAL_POST_CONTAINER.appendChild(POST_BODY);
-    INDIVIDUAL_POST_CONTAINER.appendChild(POST_TAGS);
+    VIEW_POST_BTN_BOX.appendChild(VIEW_POST_BUTTON);
+    TEXT_BOX.appendChild(TITLE_BOX);
+    TEXT_BOX.appendChild(BODY_BOX);
+    TEXT_BOX.appendChild(TAGS_BOX);
+    TITLE_BOX.appendChild(POST_TITLE);
+    BODY_BOX.appendChild(POST_BODY);
+    TAGS_BOX.appendChild(POST_TAGS);
+    TAGS_BOX.innerHTML = `<strong>Tags:</strong> ${TAGS_BOX.innerHTML}`;
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_IMAGE);
-    INDIVIDUAL_POST_CONTAINER.appendChild(VIEW_POST_BUTTON);
-
+    container.appendChild(TEXT_BOX);
     container.appendChild(INDIVIDUAL_POST_CONTAINER);
+    INDIVIDUAL_POST_CONTAINER.appendChild(VIEW_POST_BTN_BOX);
 
     POST_IMAGE.addEventListener("click", () => {
       window.location.href = `/post/?id=${post.id}`;
@@ -102,6 +140,7 @@ export class CreateMyPostsElements extends CreateAllPostElements {
     const editButton = document.createElement("button");
     const deleteButton = document.createElement("button");
     const POST_CONTAINER = document.createElement("div");
+    const BUTTON_CONTAINER = document.createElement("div");
 
     INDIVIDUAL_POST_CONTAINER.classList.add("my-post");
 
@@ -118,10 +157,22 @@ export class CreateMyPostsElements extends CreateAllPostElements {
 
     deleteButton.classList.add("delete-button");
 
-    deleteButton.addEventListener("click", deletePost);
+    editButton.classList.add("button-mobile");
+    editButton.classList.add("button-desktop");
+    editButton.classList.add("px-4");
+    editButton.classList.add("dark:dark-mode-style");
 
-    POST_CONTAINER.appendChild(editButton);
-    POST_CONTAINER.appendChild(deleteButton);
+    deleteButton.classList.add("button-mobile");
+    deleteButton.classList.add("button-desktop");
+    deleteButton.classList.add("px-4");
+    deleteButton.classList.add("dark:dark-mode-style");
+
+    BUTTON_CONTAINER.classList.add("edit-delete-buttons");
+
+    deleteButton.addEventListener("click", deletePost);
+    BUTTON_CONTAINER.appendChild(editButton);
+    BUTTON_CONTAINER.appendChild(deleteButton);
+    POST_CONTAINER.appendChild(BUTTON_CONTAINER);
     INDIVIDUAL_POST_CONTAINER.appendChild(POST_CONTAINER);
 
     return INDIVIDUAL_POST_CONTAINER;
@@ -187,3 +238,50 @@ export async function getAllPosts() {
 }
 
 getAllPosts();
+
+//HAMBURGER NAV
+
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navMenu = document.getElementById("nav-menu");
+
+const handleNavMenu = () => {
+  if (navMenu) {
+    if (window.innerWidth >= 641) {
+      navMenu.classList.remove("hidden");
+      navMenu.classList.add("flex");
+    } else {
+      navMenu.classList.add("hidden");
+      navMenu.classList.remove("flex");
+    }
+  }
+};
+
+handleNavMenu();
+
+if (hamburgerMenu && navMenu) {
+  hamburgerMenu.addEventListener("click", () => {
+    if (window.innerWidth < 641) {
+      navMenu.classList.toggle("hidden");
+      navMenu.classList.toggle("block");
+    }
+  });
+
+  window.addEventListener("resize", handleNavMenu);
+}
+
+//Display Create Form
+
+const createPostButton = document.querySelector(".create-post-button");
+const createPostForm = document.querySelector(".create-post-form");
+
+if (createPostButton && createPostForm) {
+  createPostButton.addEventListener("click", () => {
+    if (createPostForm.classList.contains("hidden")) {
+      createPostForm.classList.remove("hidden");
+      createPostForm.classList.add("show");
+    } else {
+      createPostForm.classList.remove("show");
+      createPostForm.classList.add("hidden");
+    }
+  });
+}

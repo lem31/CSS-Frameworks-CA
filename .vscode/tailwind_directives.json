@@ -1,0 +1,10 @@
+{
+  "version": 1.0,
+  "atDirectives": [
+    { "name": "@tailwind", "description": "Tailwind directive" },
+    { "name": "@apply", "description": "Tailwind directive" },
+    { "name": "@screen", "description": "Tailwind directive" },
+    { "name": "@layer", "description": "Tailwind directive" },
+    { "name": "@config", "description": "Tailwind directive" }
+  ]
+}

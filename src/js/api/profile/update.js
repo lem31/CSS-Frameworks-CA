@@ -41,6 +41,14 @@ export function displayUpdateProfileForm() {
   }
 }
 
-UPDATE_PROFILE_BUTTON.addEventListener("click", displayUpdateProfileForm);
-CANCEL_BUTTON.addEventListener("click", closeUpdateProfileForm);
-PROFILE_FORM.style.display = "none";
+if (UPDATE_PROFILE_BUTTON) {
+  UPDATE_PROFILE_BUTTON.addEventListener("click", displayUpdateProfileForm);
+}
+
+if (CANCEL_BUTTON) {
+  CANCEL_BUTTON.addEventListener("click", closeUpdateProfileForm);
+}
+
+if (PROFILE_FORM) {
+  PROFILE_FORM.style.display = "none";
+}

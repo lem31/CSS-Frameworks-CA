@@ -83,26 +83,65 @@ export async function getUserProfile() {
 
 function displayUserProfile(PROFILE) {
   const USER_PROFILE = document.getElementById("my-profile");
+  const PROFILE_BOX = document.getElementById("profile-box");
   const USER_NAME = document.createElement("h2");
   const USER_EMAIL = document.createElement("p");
   const BIO = document.createElement("p");
   const BANNER = document.createElement("img");
   const AVATAR = document.createElement("img");
   const NUMBER_OF_POSTS = document.createElement("p");
-  const NUMBER_OF_FOLLOWERS = document.createElement("p");
-  const NUMBER_FOLLOWING = document.createElement("p");
+  const NUMBER_OF_FOLLOWERS = document.createElement("span");
+  const NUMBER_FOLLOWING = document.createElement("span");
+  const FOLLOW_COUNT_CONTAINER = document.createElement("div");
+  const AVATAR_CONTAINER = document.querySelector(".avatar-container");
+  const FOLLOWING_LABEL = document.createElement("span");
+  FOLLOWING_LABEL.innerHTML = "Following: ";
+  const FOLLOW_BUTTON = document.createElement("button");
+  const FOLLOW_BUTTON_BOX = document.createElement("div");
+  FOLLOW_BUTTON.innerHTML = "Follow";
+  const FOLLOWERS_LABEL = document.createElement("span");
+  FOLLOWERS_LABEL.innerHTML = "Followers: ";
+  const USER_NAME_BOX = document.createElement("div");
 
+  FOLLOW_COUNT_CONTAINER.classList.add("follower-layout");
+  USER_NAME.classList.add("username-mobile");
+  USER_NAME.classList.add("username-desktop");
+  USER_EMAIL.classList.add("dark:text-white");
+  USER_PROFILE.classList.add("flex-col-center-layout");
+  AVATAR.classList.add("profile-image-box");
+  AVATAR.classList.add("dark:border-2");
+  AVATAR.classList.add("dark:border-solid");
+  AVATAR.classList.add("dark:border-white");
   BANNER.classList.add("profile-banner");
   AVATAR.classList.add("profile-avatar");
+  USER_NAME.classList.add("dark:text-white");
+  FOLLOWING_LABEL.classList.add("dark:text-white");
+  FOLLOWERS_LABEL.classList.add("dark:text-white");
+  NUMBER_FOLLOWING.classList.add("dark:text-white");
+  NUMBER_OF_FOLLOWERS.classList.add("dark:text-white");
+  FOLLOW_BUTTON.classList.add("button-desktop");
+  FOLLOW_BUTTON.classList.add("button-mobile");
+  FOLLOW_BUTTON.classList.add("px-4");
+  FOLLOW_BUTTON.classList.add("dark:dark-mode-style");
+  FOLLOW_BUTTON.classList.add("mt-2");
+  FOLLOW_BUTTON_BOX.classList.add("flex-center-layout");
+  USER_NAME_BOX.classList.add("flex-center-layout");
+  PROFILE_BOX.classList.add("dark:dark-mode-style-profile-box");
 
-  USER_PROFILE.appendChild(USER_NAME);
-  USER_PROFILE.appendChild(USER_EMAIL);
-  USER_PROFILE.appendChild(BIO);
-  USER_PROFILE.appendChild(BANNER);
-  USER_PROFILE.appendChild(AVATAR);
-  USER_PROFILE.appendChild(NUMBER_OF_POSTS);
-  USER_PROFILE.appendChild(NUMBER_OF_FOLLOWERS);
-  USER_PROFILE.appendChild(NUMBER_FOLLOWING);
+  PROFILE_BOX.appendChild(AVATAR_CONTAINER);
+  PROFILE_BOX.appendChild(USER_NAME_BOX);
+  PROFILE_BOX.appendChild(FOLLOW_COUNT_CONTAINER);
+  PROFILE_BOX.appendChild(FOLLOW_BUTTON_BOX);
+  AVATAR_CONTAINER.appendChild(AVATAR);
+  FOLLOW_COUNT_CONTAINER.appendChild(FOLLOWERS_LABEL);
+  FOLLOW_COUNT_CONTAINER.appendChild(NUMBER_OF_FOLLOWERS);
+  FOLLOW_COUNT_CONTAINER.appendChild(FOLLOWING_LABEL);
+  FOLLOW_COUNT_CONTAINER.appendChild(NUMBER_FOLLOWING);
+  PROFILE_BOX.appendChild(FOLLOW_COUNT_CONTAINER);
+  FOLLOWING_LABEL.appendChild(NUMBER_FOLLOWING);
+  PROFILE_BOX.appendChild(FOLLOW_BUTTON);
+  FOLLOW_BUTTON_BOX.appendChild(FOLLOW_BUTTON);
+  USER_NAME_BOX.appendChild(USER_NAME);
 
   USER_NAME.innerHTML = PROFILE.name || "N/A";
   USER_EMAIL.innerHTML = PROFILE.email || "N/A";
@@ -112,10 +151,11 @@ function displayUserProfile(PROFILE) {
       ? PROFILE.banner.url
       : "../../../ui/images/default-banner.jpg";
 
-  AVATAR.src =
-    PROFILE.avatar && PROFILE.avatar.url
-      ? PROFILE.avatar.url
-      : "../../../ui/images/default-avatar.jpg";
+  if (PROFILE.avatar && PROFILE.avatar.url) {
+    AVATAR.src = PROFILE.avatar.url;
+  } else {
+    AVATAR.src = "../../../ui/images/default-avatar.jpg";
+  }
   NUMBER_OF_POSTS.innerHTML = PROFILE.posts ? PROFILE.posts.length : 0;
 
   NUMBER_OF_FOLLOWERS.innerHTML = PROFILE.followers

@@ -1,14 +1,28 @@
 {
-  "name": "fed2-js2-ca",
+  "name": "fed2-css-frameworks-ca",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && npm run build:css",
+    "build:css": "postcss src/tailwind.css -o dist/tailwind.css && sass src/styles.scss dist/styles.scss --no-source-map",
+    "watch:css": "postcss src/tailwind.css -o dist/tailwind.css --watch && sass --watch src/styles.scss:dist/styles.scss --no-source-map",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+ "watch:styles": "nodemon -e scss -x \"npm run build:css\""
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.80.6",
+    "stylelint": "^16.10.0",
+    "stylelint-scss": "^6.8.1",
+    "tailwindcss": "^3.4.14",
     "vite": "^5.4.8"
   }
 }

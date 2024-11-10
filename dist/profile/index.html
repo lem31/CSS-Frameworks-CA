@@ -1,100 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
-    <script type="module" crossorigin src="../assets/app-BuqL-FLQ.js"></script>
-    <link rel="stylesheet" crossorigin href="../assets/app-DznScRqA.css">
+    <title>Noroff FED2 CSS-Frameworks CA</title>
+    <script type="module" crossorigin src="../assets/register-Dsj6CGox.js"></script>
+    <link rel="stylesheet" crossorigin href="../assets/register-BXqV-WEO.css">
   </head>
-  <body>
-    <h1>Profile</h1>
-
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/post/create/">Create Post</a></li>
-      </ul>
-    </nav>
-
-    <div class="update-logout-buttons-container">
-      <button id="update-profile-button">Update Profile</button>
-      <button id="logout-button">Logout</button>
-    </div>
-
-    <div id="Update-Profile">
-      <form name="updateProfile">
-        <div>
-          <label for="user-name">Username</label>
-          <input
-            class="update-profile-input"
-            id="user-name"
-            type="text"
-            name="user-name"
-            required
-            autocomplete="user-name"
-            title="Please enter a Username"
+  <body class="dark:bg-black">
+    <header class="header-layout header-layout-profile-mobile">
+      <div class="logo-div">
+        <img
+          class="dark:border-2 dark:border-white logo max-w-20 max-h-20 logo-size-mobile rounded-full"
+          src="../assets/Logo-DV5v-HlD.png"
+          alt="Logo"
+          style="width: 200px; height: 200px; border-radius: 50%"
+        />
+      </div>
+      <div class="hamburger hamburger-alignment">
+        <button class="hamburger hide-on-desktop" id="hamburger-menu-profile">
+          <img
+            class="dark:filter dark:invert min-w-7"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nO3WwQkAIAwDwIzezesWKuEO8jf4aBIAHpmSZEuS1w9QJK0/MiUBAPLBRTbj0zoatySpKTIlAQDywUU249M6GrckqSkyJQEg1x3OPOvHECpbTAAAAABJRU5ErkJggg=="
+            alt="Hamburger menu icon"
           />
-        </div>
+        </button>
+      </div>
 
-        <div>
-          <label for="user-email">User Email</label>
-          <input
-            class="update-profile-input"
-            id="user-email"
-            type="text"
-            name="user-email"
-            required
-            maxlength="100"
-            autocomplete="user-email"
-            pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-            title="Please enter a valid noroff.no or stud.noroff.no address"
-          />
-        </div>
+      <div class="nav nav-col-desktop nav-alignment">
+        <nav class="nav nav-col-desktop hidden space-x-4" id="nav-menu-profile">
+          <ul class="nav-ul nav-layout-desktop justify-end md:justify-center">
+            <li>
+              <a
+                class="whitespace-nowrap nav-items-desktop nav-items-mobile dark:text-white"
+                href="/feed/"
+                >Feed</a
+              >
+            </li>
+            <li>
+              <button
+                class="dark:dark-mode-style button-mobile button-desktop px-2"
+                id="logout-button"
+              >
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <div>
-          <label for="user-bio">Bio</label>
-          <input
-            type="text"
-            id="user-bio"
-            name="user-bio"
-            autocomplete="user-bio"
-            title=" Please enter a bio"
-          />
-        </div>
+    <button
+      class="dark-mode-toggle dark:dark-mode-style button-mobile button-desktop px-2 py-2 mt-2"
+    >
+      Dark Mode/ Light Mode
+    </button>
 
-        <div>
-          <label for="profile-banner">Profile Banner</label>
-          <input
-            type="url"
-            id="profile-banner"
-            name="profile-banner"
-            autocomplete="profile-banner"
-            title=" Please enter a url for your profile banner"
-          />
-        </div>
+    <main>
+      <div class="flex-center-layout">
+        <h1 class="main-headers-mobile main-headers-desktop dark:text-white">
+          My Profile
+        </h1>
+      </div>
 
-        <div>
-          <label for="profile-avatar">Profile Avatar</label>
-          <input
-            type="url"
-            id="profile-avatar"
-            name="profile-avatar"
-            autocomplete="profile-avatar"
-            title=" Please enter a url for your profile avatar"
-          />
+      <div class="avatar-container flex-center-layout"></div>
+      <div class="" id="my-profile">
+        <div
+          id="profile-box"
+          class="profile-box-mobile profile-box-desktop"
+        ></div>
+      </div>
+      <div class="flex-center-layout mt-4 mb-4">
+        <h2 class="post-title-desktop post-title-mobile dark:text-white">
+          MY POSTS
+        </h2>
+      </div>
+      <div class="outer-post-container" id="my-posts-container">HELLO</div>
+    </main>
 
-          <button id="save-profile-button">Save Profile</button>
-          <button id="cancel-button">Cancel</button>
-        </div>
-      </form>
-    </div>
-
-    <div id="error-message" style="color: red"></div>
-
-    <div id="my-profile">MY PROFILE</div>
-    <h2>MY POSTS</h2>
-    <div id="my-posts-container"></div>
+    <footer class="dark:border-2 dark:border-white footer">
+      <div class="second-col-box-footer">
+        <p class="footer-text-mobile footer-text-desktop">© 2024 Allergen 0</p>
+      </div>
+      <div class="third-col-box-footer">
+        <ul class="footer-second-col">
+          <li>
+            <a class="footer-text-mobile footer-text-desktop" href="">About</a>
+          </li>
+          <li>
+            <a class="footer-text-mobile footer-text-desktop" href=""
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a class="footer-text-mobile footer-text-desktop" href=""
+              >Privacy Policy</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

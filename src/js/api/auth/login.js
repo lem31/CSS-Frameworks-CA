@@ -1,5 +1,5 @@
 import { API_AUTH_LOGIN } from "../constants.js";
-import { LOGIN_FORM } from "../constants.js";
+
 import { ERROR_MESSAGE } from "../constants.js";
 import { headers } from "../headers.js";
 
@@ -30,6 +30,8 @@ import { headers } from "../headers.js";
  * LOGIN_BUTTON.addEventListener("click", login);
  */
 
+const LOGIN_FORM = document.getElementById("login-form");
+
 export async function login(event) {
   event.preventDefault();
 
@@ -49,7 +51,7 @@ export async function login(event) {
     if (INFO) {
       localStorage.setItem("accessToken", INFO.accessToken);
       localStorage.setItem("user", JSON.stringify(INFO));
-      window.location.href = "/profile/";
+      window.location.href = "profile/";
 
       if (INFO.error) {
         ERROR_MESSAGE.innerHTML =
