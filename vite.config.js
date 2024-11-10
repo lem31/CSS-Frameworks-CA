@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   appType: "mpa",
-  base: "",
+  base: "/CSS-Frameworks-CA/",
   build: {
     target: "esnext",
     rollupOptions: {
