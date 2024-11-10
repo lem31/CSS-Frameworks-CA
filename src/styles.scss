@@ -92,6 +92,11 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
+@mixin grid-container-profile-mobile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 @mixin flex-col-layout-center {
   display: flex;
   flex-direction: column;
@@ -182,13 +187,17 @@
     @include grid-container-mobile();
   }
 
+  .header-layout-profile-mobile {
+    @include grid-container-profile-mobile();
+  }
+
   .logo {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 
   .hamburger {
-    grid-column: 3 / 4;
+    grid-column: 3 / 3;
     grid-row: 1 / 2;
   }
 
@@ -251,7 +260,7 @@
   }
 
   .search-mobile {
-    width: 347px;
+    width: 200px;
     height: 40px;
     background-color: $tertiary-color;
     border: 3px solid $primary-color;
