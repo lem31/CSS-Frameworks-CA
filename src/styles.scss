@@ -18,19 +18,16 @@
   }
 }
 
-.dark-mode-styles {
-  @apply dark-mode-style;
-}
-
 .body-html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
 }
 
 .body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
@@ -47,6 +44,8 @@
 
 .footer {
   display: grid;
+  position: sticky;
+  bottom: 0;
   grid-template-columns: repeat(3, 1fr);
   background-color: black;
   width: 100%;
